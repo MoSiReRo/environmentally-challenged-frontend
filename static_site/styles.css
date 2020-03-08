@@ -1,0 +1,84 @@
+.title {
+  font-family: Georgia, serif;
+  color: black;
+  text-align: center;
+}
+.tipHint {
+  font-family: Georgia, serif;
+  color: white;
+  text-align: center;
+}
+.graph {
+  font-family: Georgia, serif;
+  color: #1e836c;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 100;
+}
+.challenge {
+  color: white;
+}
+
+.acceptButton {
+  background-color: white;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: grey;
+  text-align: left;
+}
+.tryAnother {
+  background-color: #1e836c;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: white;
+  text-align: left;
+}
+
+.dateTime {
+  background-color: white;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: #1e836c;
+}
+
+footer {
+  background-color: #1e836c;
+  font-family: Georgia, serif;
+  color: white;
+}
+
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.purple {
+  background-color: purple;
+}
