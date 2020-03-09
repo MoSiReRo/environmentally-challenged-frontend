@@ -6,10 +6,10 @@ class Buttons extends React.Component {
         return (
             <div className="row">
                <div className="col-6 acceptButton orange">
-                  Accept button
+                  <input type="button" className="btn btn-primary btn-sm" value="Accept"/>
                </div>
                <div className="col-6 tryAnother pink">
-                  Try Another button
+               <input type="button" className="btn btn-primary btn-sm" value="Try Another"/>
                </div>
             </div>
         )
