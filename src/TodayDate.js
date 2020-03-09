@@ -1,18 +1,18 @@
 import React from 'react';
 
 
-class Date extends React.Component {
+class TodayDate extends React.Component {
 
     render() {
         return (
             <div className="col-6 col-md-3 dateTime purple">
-            Date
+            {this.props.getDateFunc}
          </div>
         );
     }
 }
 
-export default Date;
+export default TodayDate;
 
 
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import Title from './Title';
-import Date from './Date';
+import TodayDate from './TodayDate';
 
 
 class Header extends React.Component {
+
+
 
     render() {
         return (
@@ -12,7 +14,7 @@ class Header extends React.Component {
          <div className="col-md-6 orange d-none d-md-block">
             [EMPTY]
          </div>
-         <Date />
+         <TodayDate getDateFunc={this.props.getDateFunc}/>
       </div>
         );
     }
