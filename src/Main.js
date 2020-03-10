@@ -1,25 +1,37 @@
 import React from 'react';
 import Graph from './Graph';
 import Challenge from './Challenge';
+import TipLarge from './TipLarge';
+import Buttons from './Buttons';
 
 
 class Main extends React.Component {
 
     render() {
         return (
-            <div className="row">
-         
-         <div className="col-3 grey d-none d-md-block">
-            [EMPTY]
+      <div>
+         <div className="row">
+            <div className="col-3 grey d-none d-md-block">
+               [EMPTY]
+            </div>
+            <div className="col-12 col-md-6 graph challenge yellow">
+               <Graph />
+               <Challenge 
+               newChallengeFunc={this.props.newChallengeFunc}/>
+            </div>
+            <div className="col-3 grey d-none d-md-block">
+               [EMPTY]
+            </div>
          </div>
-         
-         <div className="col-12 col-md-6 graph challenge yellow">
-            <Graph />
-            <Challenge />
-         </div>
-         
-         <div className="col-3 grey d-none d-md-block">
-            [EMPTY]
+         <div className="row">
+               <TipLarge />
+            <div className="col-12 col-md-6 boxForButtons purple">
+               <Buttons 
+               newChallengeFunc={this.props.newChallengeFunc}/>
+            </div>
+            <div className="col-3 red d-none d-md-block">
+               [empty]
+            </div>
          </div>
       </div>
         );

@@ -6,7 +6,8 @@ class Challenge extends React.Component {
     render() {
         return (
             <div>
-                Challenge
+                Today's Challenge: 
+                {this.props.newChallenge}
             </div>
         )
         
