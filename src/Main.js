@@ -16,8 +16,10 @@ class Main extends React.Component {
             </div>
             <div className="col-12 col-md-6 graph challenge yellow">
                <Graph />
-               <Challenge 
-               newChallengeFunc={this.props.newChallengeFunc}/>
+               <Challenge
+               todaysChallenge={this.props.todaysChallenge}
+               newChallengeFunc={this.props.newChallengeFunc}
+               />
             </div>
             <div className="col-3 grey d-none d-md-block">
                [EMPTY]

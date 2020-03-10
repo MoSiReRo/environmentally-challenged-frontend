@@ -7,81 +7,70 @@ import Footer from './Footer';
 
 class App extends React.Component {
 
- state = {
-   date: "",
-   challenges: [
-  "Bring a reusable bag when you go shopping",
-  "Don't buy anything packaged in plastic",
-  "Use a reusable water bottle",
-  "Use a reusable coffee cup",
-  "Reuse a plastic bag as a bin bag",
-  "Buy reusable straws",
-  "Use a compost bin for your food waste",
-  "Switch all your bills and bank statements to paperless",
-  "Don't eat meat today",
-  "Try a plant-based milk alternative",
-  "Take a 4 minute shower",
-  "Don't overfill your kettle; only boil the amount you need",
-  "Replace your light bulbs with more energy-efficient ones",
-  "Don't leave water running longer than it needs to",
-  "Do your laundry at a lower temperature",
-  "Use a drying rack instead of the tumble dryer",
-  "Use public transport instead of driving",
-  "Walk or cycle instead of driving",
-  "Buy your next item of clothing at a second-hand store",
-  "Give your unwanted clothes to charity instead of throwing them away",
-  "Read up on what can and can't be recycled in your borough",
-  "Encourage someone else to adopt eco-friendly habits"
-   ]
- };
- 
- componentDidMount() {
-   this.getDate();
- }
+  state = {
+    date: "",
+    challenges: [
+      {ChallengeId: "966967c4-62ee-11ea-bc55-0242ac130003", challengeDesc: "Bring a reusable bag when you go shopping", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save XX litres of water"},
+      {ChallengeId: "96696a26-62ee-11ea-bc55-0242ac130003", challengeDesc: "Don't buy anything packaged in plastic", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save XXX"},
+      {ChallengeId: "96696b2a-62ee-11ea-bc55-0242ac130003", challengeDesc: "Use a reusable water bottle", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save YYY"},
+      {ChallengeId: "96696c10-62ee-11ea-bc55-0242ac130003", challengeDesc: "Switch all your bills and bank statements to paperless", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save ZZZ"},
+      {ChallengeId: "96696ce2-62ee-11ea-bc55-0242ac130003", challengeDesc: "Turn the tap off when brushing your teeth", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save ABC"},
+      {ChallengeId: "96697002-62ee-11ea-bc55-0242ac130003", challengeDesc: "Unplug appliances in standby mode", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save DEF"}
+    ],
+    todaysChallenge: {ChallengeId: "1", challengeDesc: "Click 'Try Another' to see today's challenge", completed: 0, userId: 1, accepted: 0, tips: "Tips go here"},
+  };
 
- getDate = () => {
-  let today = new Date()
-  let dd = today.getDate();
-  let mm = today.getMonth() + 1;
-  let yyyy = today.getFullYear();
+  componentDidMount() {
+    this.getDate();
+  }
+
+  getDate = () => {
+    let today = new Date()
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1;
+    let yyyy = today.getFullYear();
     if (dd < 10) {
-      dd=`0${dd}`;
-  }
+      dd = `0${dd}`;
+    }
     if (mm < 10) {
-      mm=`0${mm}`;
+      mm = `0${mm}`;
+    }
+    const fullDate = dd + "/" + mm + "/" + yyyy;
+
+    this.setState({
+      date: fullDate
+    });
   }
-const fullDate = dd + "/" + mm + "/" + yyyy;
-
-   this.setState({
-     date: fullDate
-   });
- }
 
 
-// Temporary array of challenges
-newChallenge = () => {
-const challenges = this.state.challenges;
-const i = (Math.floor(Math.random()*challenges.length));
-const randomChallenge = challenges[i];
-console.log(randomChallenge);
-return randomChallenge;
-}
+  // Temporary array of challenges
+  newChallenge = () => {
+    const challenges = this.state.challenges;
+    const i = (Math.floor(Math.random() * challenges.length));
+    const randomChallenge = challenges[i];
+    console.log(randomChallenge);
+    this.setState({
+      todaysChallenge: randomChallenge
+    })
+    return randomChallenge;
+  }
 
 
 
-
-render() {
-  return (
-    <div className="container-fluid">
-      <Counter />
-      <Header 
-        getDateFunc={this.state.date}/>
-      <Main 
-        newChallengeFunc={this.newChallenge}/>
-      <MobileTip />
-      <Footer />
-    </div>
-  ); 
+  render() {
+    return (
+      <div className="container-fluid">
+        <Counter />
+        <Header
+          getDateFunc={this.state.date} />
+        <Main
+          todaysChallenge={this.state.todaysChallenge}
+          newChallengeFunc={this.newChallenge}
+          />
+        <MobileTip />
+        <Footer />
+      </div>
+    );
   }
 }
 
