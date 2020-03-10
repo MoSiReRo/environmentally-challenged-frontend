@@ -17,11 +17,31 @@ class App extends React.Component {
       {ChallengeId: "96696ce2-62ee-11ea-bc55-0242ac130003", challengeDesc: "Turn the tap off when brushing your teeth", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save ABC"},
       {ChallengeId: "96697002-62ee-11ea-bc55-0242ac130003", challengeDesc: "Unplug appliances in standby mode", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save DEF"}
     ],
-    todaysChallenge: {ChallengeId: "1", challengeDesc: "Click 'Try Another' to see today's challenge", completed: 0, userId: 1, accepted: 0, tips: "Tips go here"},
+    todaysChallenge: {ChallengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here"},
   };
 
+ 
   componentDidMount() {
+    // displays current date
     this.getDate();
+
+    // generates random task at given time every 24hrs
+    const currentTime = new Date().getTime();  //current unix timestamp
+    const execTime = new Date().setHours(5,0,0,0);  //API call time = today at 05:00
+    let timeLeft;
+    if(currentTime < execTime) {
+      //it's currently earlier than 05:00
+      timeLeft = execTime - currentTime;
+    } else {
+      //it's currently later than 05:00, schedule for tomorrow at 05:00
+      timeLeft = execTime + 86400000 - currentTime
+    }
+        this.interval = setInterval(() => this.newChallenge(), 86400000);
+        this.timeout = setTimeout(() => this.newChallenge(), timeLeft);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   getDate = () => {
@@ -43,7 +63,6 @@ class App extends React.Component {
   }
 
 
-  // Temporary array of challenges
   newChallenge = () => {
     const challenges = this.state.challenges;
     const i = (Math.floor(Math.random() * challenges.length));
@@ -54,6 +73,8 @@ class App extends React.Component {
     })
     return randomChallenge;
   }
+
+  
 
 
 
