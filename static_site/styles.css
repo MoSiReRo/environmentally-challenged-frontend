@@ -1,0 +1,110 @@
+.counter {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
+    background-color: #8ab446;
+    color: white;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-bottom: 3em;
+    line-height: 0em;
+    background-image: url("jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 { 
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    text-align: left;
+}
+
+.title {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    color: white;
+    padding-left: 2em;
+    background-image: url("jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dateTime {
+    background-color: #8ab446;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
+    color: white;
+    padding-left: 3em;
+    background-image: url("jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+.graph {
+    background-color: white;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
+    color: #8ab446;
+    padding-top: 1em;
+}
+.challenge {
+    background-color: white;
+    font-family: 'Heebo', sans-serif;
+    color: #8ab446;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+.tipHint {
+    background-color: white;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
+    color: #8ab446;
+    text-align: left;
+    padding-left: 3em;
+}
+
+.tipHintMobile {
+    background-color: white;
+    font-family: 'Heebo', sans-serif;
+    color: #8ab446;
+    text-align: left;
+    padding-left: 2em;
+    padding-top: 3em;
+}
+
+.boxForButtons {
+    background-color: white;
+}
+
+.acceptButton {
+    background-color: white;
+    font-family: 'Heebo', sans-serif;
+    color: #8ab446;
+    padding-left: 11em;
+}
+.tryAnother {
+    background-color: white;
+    font-family: 'Heebo', sans-serif;
+    color: #8ab446;
+    text-align: left;
+}
+
+.footer {
+    background-color: #8ab446;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
+    font-size: 0.9em;
+    color: white;
+    text-align: left;
+    padding-top: 3em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    background-image: url("jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background {
+    background-color: white;
+}
