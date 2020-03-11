@@ -7,7 +7,7 @@ class Counter extends React.Component {
         return (
             <div className="row">
                 <div className="col-12 counter purple">
-            Counter
+            Completed: {this.props.counter}
                 </div>
             </div>
         );
