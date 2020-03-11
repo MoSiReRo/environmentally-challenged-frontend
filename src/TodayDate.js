@@ -5,7 +5,7 @@ class TodayDate extends React.Component {
 
     render() {
         return (
-            <div className="col-6 col-md-3 dateTime purple">
+            <div className="col-6 col-md-3 dateTime">
             {this.props.getDateFunc}
          </div>
         );
