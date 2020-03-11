@@ -6,7 +6,7 @@ render() {
     return (
 <div className="row">
          <div className="col-12 col-md-3 tipHint pink d-lg-none d-md-none">
-            Tip/Hint for mobiles
+            {this.props.todaysChallengeTip}
          </div>
       </div>
     )
