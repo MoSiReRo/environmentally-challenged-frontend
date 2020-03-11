@@ -18,7 +18,7 @@ class Buttons extends React.Component {
                   <input type="button" className="btn btn-primary btn-sm" value={isAccepted ? "I did it!" : "Accept"} onClick={isAccepted ? finishDayFunc : challengeAcceptedFunc}/>
                </div>
                <div className="col-6 tryAnother">
-               <input type="button" className="btn btn-primary btn-sm" value={isAccepted ? "Try another time" : "Try Another"} onClick={newChallengeFunc}/>
+               <input type="button" className="btn btn-primary btn-sm" value={isAccepted ? "Try another time" : "Try Another"} onClick={isAccepted ? finishDayFunc : newChallengeFunc}/>
                </div>
             </div>
         )

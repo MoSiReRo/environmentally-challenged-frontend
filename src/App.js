@@ -31,7 +31,7 @@ class App extends React.Component {
 
     // generates random task at given time every 24hrs
     const currentTime = new Date().getTime();  //current unix timestamp
-    const execTime = new Date().setHours(12,12,0,0);  //API call time = today at 05:00
+    const execTime = new Date().setHours(22,50,0,0);  //API call time = today at 05:00
     let timeLeft;
     if(currentTime < execTime) {
       //it's currently earlier than 05:00
