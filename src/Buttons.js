@@ -13,10 +13,10 @@ class Buttons extends React.Component {
     render() {
         return (
             <div className="row">
-               <div className="col-6 acceptButton orange">
+               <div className="col-6 acceptButton">
                   <input type="button" className="btn btn-primary btn-sm" value="Accept" onClick={this.challengeAccepted}/>
                </div>
-               <div className="col-6 tryAnother pink">
+               <div className="col-6 tryAnother">
                <input type="button" className="btn btn-primary btn-sm" value="Try Another" onClick={this.newChallenge}/>
                </div>
             </div>

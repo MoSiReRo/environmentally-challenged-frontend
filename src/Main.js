@@ -11,33 +11,24 @@ class Main extends React.Component {
       return (
          <div>
             <div className="row">
-               <div className="col-3 grey d-none d-md-block">
-                  [EMPTY]
-            </div>
-               <div className="col-12 col-md-6 graph challenge yellow">
+               <div className="col-12 col-md-12 graph challenge">
                   <Graph />
                   <Challenge
                      todaysChallenge={this.props.todaysChallenge}
                      newChallengeFunc={this.props.newChallengeFunc}
                   />
                </div>
-               <div className="col-3 grey d-none d-md-block">
-                  [EMPTY]
-            </div>
             </div>
             <div className="row">
                <TipLarge
                   todaysChallengeTip={this.props.todaysChallenge.tips}
                />
-               <div className="col-12 col-md-6 boxForButtons purple">
+               <div className="col-12 col-md-6 boxForButtons">
                   <Buttons
                      newChallengeFunc={this.props.newChallengeFunc}
                      challengeAcceptedFunc={this.props.challengeAcceptedFunc}
                   />
                </div>
-               <div className="col-3 red d-none d-md-block">
-                  [empty]
-            </div>
             </div>
          </div>
       );

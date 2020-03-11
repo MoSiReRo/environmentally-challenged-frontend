@@ -10,16 +10,16 @@ class App extends React.Component {
   state = {
     date: "",
     challenges: [
-      {ChallengeId: "966967c4-62ee-11ea-bc55-0242ac130003", challengeDesc: "Bring a reusable bag when you go shopping", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save XX litres of water"},
-      {ChallengeId: "96696a26-62ee-11ea-bc55-0242ac130003", challengeDesc: "Don't buy anything packaged in plastic", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save XXX"},
-      {ChallengeId: "96696ce2-62ee-11ea-bc55-0242ac130003", challengeDesc: "Turn the tap off when brushing your teeth", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save ABC"},
-      {ChallengeId: "96697002-62ee-11ea-bc55-0242ac130003", challengeDesc: "Unplug appliances in standby mode", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save DEF"}
+      {challengeId: "966967c4-62ee-11ea-bc55-0242ac130003", challengeDesc: "Bring a reusable bag when you go shopping", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save XX litres of water"},
+      {challengeId: "96696a26-62ee-11ea-bc55-0242ac130003", challengeDesc: "Don't buy anything packaged in plastic", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save XXX"},
+      {challengeId: "96696ce2-62ee-11ea-bc55-0242ac130003", challengeDesc: "Turn the tap off when brushing your teeth", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save ABC"},
+      {challengeId: "96697002-62ee-11ea-bc55-0242ac130003", challengeDesc: "Unplug appliances in standby mode", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save DEF"}
     ],
     completedChallenges: [
-      {ChallengeId: "96696b2a-62ee-11ea-bc55-0242ac130003", challengeDesc: "Use a reusable water bottle", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save YYY"},
-      {ChallengeId: "96696c10-62ee-11ea-bc55-0242ac130003", challengeDesc: "Switch all your bills and bank statements to paperless", completed: 0, userId: 1, accepted: 0, tips: "Doing this for a year will save ZZZ"}
+      {challengeId: "96696b2a-62ee-11ea-bc55-0242ac130003", challengeDesc: "Use a reusable water bottle", completed: 1, userId: 1, accepted: 0, tips: "Doing this for a year will save YYY"},
+      {challengeId: "96696c10-62ee-11ea-bc55-0242ac130003", challengeDesc: "Switch all your bills and bank statements to paperless", completed: 1, userId: 1, accepted: 0, tips: "Doing this for a year will save ZZZ"}
     ],
-    todaysChallenge: {ChallengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here"},
+    todaysChallenge: {challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here"},
   };
 
  
@@ -29,7 +29,7 @@ class App extends React.Component {
 
     // generates random task at given time every 24hrs
     const currentTime = new Date().getTime();  //current unix timestamp
-    const execTime = new Date().setHours(5,0,0,0);  //API call time = today at 05:00
+    const execTime = new Date().setHours(12,12,0,0);  //API call time = today at 05:00
     let timeLeft;
     if(currentTime < execTime) {
       //it's currently earlier than 05:00
@@ -64,7 +64,8 @@ class App extends React.Component {
     });
   }
 
-
+// Picks a random challenge from the array when 'Try Another' button is clicked
+// Also same function used to generate challenge at start of day
   newChallenge = () => {
     const challenges = this.state.challenges;
     const i = (Math.floor(Math.random() * challenges.length));
