@@ -21,6 +21,7 @@ class App extends React.Component {
     ],
     todaysChallenge: {challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here"},
     isAccepted: false,
+    isCompleted: false,
     isEndOfDay: false
   };
 
@@ -92,10 +93,19 @@ class App extends React.Component {
     console.log(acceptedChallenge);
   }
 
-  finishDay = () => {
+
+  challengeCompleted = () => {
+    // get todaysChallenge from state
+    const completedChallenge = this.state.todaysChallenge;
+    // update completed: 1
+    completedChallenge.completed = 1;
+    // update state
     this.setState({
+      todaysChallenge: completedChallenge,
+      isCompleted: true,
       isEndOfDay: true
     });
+    console.log(completedChallenge)
   }
 
 
@@ -109,9 +119,9 @@ class App extends React.Component {
           todaysChallenge={this.state.todaysChallenge}
           newChallengeFunc={this.newChallenge}
           challengeAcceptedFunc={this.challengeAccepted}
+          challengeCompletedFunc={this.challengeCompleted}
           isAccepted={this.state.isAccepted}
           isEndOfDay={this.state.isEndOfDay}
-          finishDayFunc={this.finishDay}
         />
         <MobileTip
           todaysChallengeTip={this.state.todaysChallenge.tips}
