@@ -29,7 +29,9 @@ class Main extends React.Component {
                <TipLarge />
             <div className="col-12 col-md-6 boxForButtons purple">
                <Buttons 
-               newChallengeFunc={this.props.newChallengeFunc}/>
+               newChallengeFunc={this.props.newChallengeFunc}
+               challengeAcceptedFunc={this.props.challengeAcceptedFunc}
+               />
             </div>
             <div className="col-3 red d-none d-md-block">
                [empty]

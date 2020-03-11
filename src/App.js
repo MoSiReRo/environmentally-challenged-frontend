@@ -55,7 +55,17 @@ class App extends React.Component {
     return randomChallenge;
   }
 
-
+  challengeAccepted = () => {
+    // get todaysChallenge from state
+    const acceptedChallenge = this.state.todaysChallenge;
+    // update accepted: 1 (use 0/1 rather than false/true bc that's how SQL stores booleans)
+    acceptedChallenge.accepted = 1;
+    // update state
+    this.setState({
+      todaysChallenge: acceptedChallenge
+    });
+    console.log(acceptedChallenge);
+  }
 
   render() {
     return (
@@ -66,6 +76,7 @@ class App extends React.Component {
         <Main
           todaysChallenge={this.state.todaysChallenge}
           newChallengeFunc={this.newChallenge}
+          challengeAcceptedFunc={this.challengeAccepted}
           />
         <MobileTip />
         <Footer />
