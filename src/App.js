@@ -20,6 +20,8 @@ class App extends React.Component {
       {challengeId: "96696c10-62ee-11ea-bc55-0242ac130003", challengeDesc: "Switch all your bills and bank statements to paperless", completed: 1, userId: 1, accepted: 0, tips: "Doing this for a year will save ZZZ"}
     ],
     todaysChallenge: {challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here"},
+    isAccepted: false,
+    isEndOfDay: false
   };
 
  
@@ -84,9 +86,16 @@ class App extends React.Component {
     acceptedChallenge.accepted = 1;
     // update state
     this.setState({
-      todaysChallenge: acceptedChallenge
+      todaysChallenge: acceptedChallenge,
+      isAccepted: true
     });
     console.log(acceptedChallenge);
+  }
+
+  finishDay = () => {
+    this.setState({
+      isEndOfDay: true
+    });
   }
 
 
@@ -100,6 +109,9 @@ class App extends React.Component {
           todaysChallenge={this.state.todaysChallenge}
           newChallengeFunc={this.newChallenge}
           challengeAcceptedFunc={this.challengeAccepted}
+          isAccepted={this.state.isAccepted}
+          isEndOfDay={this.state.isEndOfDay}
+          finishDayFunc={this.finishDay}
         />
         <MobileTip
           todaysChallengeTip={this.state.todaysChallenge.tips}
