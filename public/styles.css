@@ -1,57 +1,115 @@
-.title {
-  font-family: Georgia, serif;
-  color: black;
-  text-align: center;
-}
-.tipHint {
-  font-family: Georgia, serif;
+.counter {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  background-color: #8ab446;
   color: white;
-  text-align: center;
+  padding-top: 1em;
+  padding-left: 2em;
+  padding-bottom: 3em;
+  line-height: 0em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+h1 { 
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  text-align: left;
+}
+
+.title {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  color: white;
+  padding-left: 2em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dateTime {
+  background-color: #8ab446;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  color: white;
+  padding-left: 3em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .graph {
-  font-family: Georgia, serif;
-  color: #1e836c;
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  color: #8ab446;
+  padding-top: 1em;
+}
+.challenge {
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
   text-align: center;
   font-size: 2.5em;
   font-weight: 100;
 }
-.challenge {
-  color: white;
+
+.tipHint {
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  color: #8ab446;
+  text-align: left;
+  padding-left: 3em;
+}
+
+.tipHintMobile {
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
+  text-align: left;
+  padding-left: 2em;
+  padding-top: 3em;
+}
+
+.boxForButtons {
+  background-color: white;
 }
 
 .acceptButton {
   background-color: white;
-  list-style-type: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
-  color: grey;
-  text-align: left;
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
+  padding-left: 11em;
 }
 .tryAnother {
-  background-color: #1e836c;
-  list-style-type: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
-  color: white;
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
   text-align: left;
 }
 
-.dateTime {
-  background-color: white;
-  list-style-type: none;
-  font-family: Arial, Helvetica, sans-serif;
+.footer {
+  background-color: #8ab446;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
   font-size: 0.9em;
-  color: #1e836c;
-}
-
-footer {
-  background-color: #1e836c;
-  font-family: Georgia, serif;
   color: white;
+  text-align: left;
+  padding-top: 3em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+.background {
+  background-color: white;
+}
 
-.red {
+/* .red {
   background-color: red;
 }
 
@@ -81,4 +139,4 @@ footer {
 
 .purple {
   background-color: purple;
-}
+} */
