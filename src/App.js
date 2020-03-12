@@ -1,5 +1,4 @@
 import React from 'react';
-import Counter from './Counter';
 import Header from './Header';
 import Main from './Main';
 import MobileTip from './MobileTip';
@@ -13,6 +12,7 @@ class App extends React.Component {
     uncompletedChallenges: [
     ],
     completedChallenges: [
+
     ],
     todaysChallenge: { challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
     isAccepted: false,
@@ -180,7 +180,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <Counter counter={this.state.completedChallenges.length} />
         <Header
           getDateFunc={this.state.date} />
         <Main
@@ -191,6 +190,7 @@ class App extends React.Component {
           isAccepted={this.state.isAccepted}
           isEndOfDay={this.state.isEndOfDay}
           finishDayFunc={this.finishDay}
+          counter={this.state.completedChallenges.length}
         />
         <MobileTip
           todaysChallengeTip={this.state.todaysChallenge.tips}

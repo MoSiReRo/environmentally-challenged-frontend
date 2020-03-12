@@ -1,15 +1,88 @@
+/*
+ * react-circular-progressbar styles
+ * All of the styles in this file are configurable!
+ */
+
+ .CircularProgressbar {
+  /*
+   * This fixes an issue where the CircularProgressbar svg has
+   * 0 width inside a "display: flex" container, and thus not visible.
+   */
+  width: 20%;
+  /*
+   * This fixes a centering issue with CircularProgressbarWithChildren:
+   * https://github.com/kevinsqi/react-circular-progressbar/issues/94
+   */
+  vertical-align: middle;
+  
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #3e98c7;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #d6d6d6;
+  /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
+  stroke-linecap: round;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #3e98c7;
+  font-size: 20px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-background {
+  fill: #d6d6d6;
+}
+
+/*
+ * Sample background styles. Use these with e.g.:
+ *
+ *   <CircularProgressbar
+ *     className="CircularProgressbar-inverted"
+ *     background
+ *     percentage={50}
+ *   />
+ */
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+  fill: #3e98c7;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+  fill: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+  stroke: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+  stroke: transparent;
+}
+
+
+
+
+body {
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .counter {
   font-family: 'Heebo', sans-serif;
   font-weight: 100;
-  background-color: #8ab446;
+  /* background-color: #8ab446; */
   color: white;
   padding-top: 1em;
   padding-left: 2em;
   padding-bottom: 3em;
   line-height: 0em;
-  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 h1 { 
@@ -23,20 +96,14 @@ h1 {
   font-weight: 500;
   color: white;
   padding-left: 2em;
-  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .dateTime {
-  background-color: #8ab446;
+  /* background-color: #8ab446; */
   font-family: 'Heebo', sans-serif;
   font-weight: 100;
   color: white;
   padding-left: 3em;
-  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .graph {
@@ -92,7 +159,7 @@ h1 {
 }
 
 .footer {
-  background-color: #8ab446;
+  /* background-color: #8ab446; */
   font-family: 'Heebo', sans-serif;
   font-weight: 100;
   font-size: 0.9em;
@@ -101,13 +168,6 @@ h1 {
   padding-top: 3em;
   padding-left: 2em;
   padding-bottom: 2em;
-  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.background {
-  background-color: white;
 }
 
 /* .red {
