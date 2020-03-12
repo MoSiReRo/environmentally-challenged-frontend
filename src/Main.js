@@ -16,6 +16,7 @@ class Main extends React.Component {
                   <Challenge
                      todaysChallenge={this.props.todaysChallenge}
                      newChallengeFunc={this.props.newChallengeFunc}
+                     isEndOfDay={this.props.isEndOfDay}
                   />
                </div>
             </div>
@@ -27,6 +28,10 @@ class Main extends React.Component {
                   <Buttons
                      newChallengeFunc={this.props.newChallengeFunc}
                      challengeAcceptedFunc={this.props.challengeAcceptedFunc}
+                     challengeCompletedFunc={this.props.challengeCompletedFunc}
+                     isAccepted={this.props.isAccepted}
+                     isEndOfDay={this.props.isEndOfDay}
+                     finishDayFunc={this.props.finishDayFunc}
                   />
                </div>
             </div>

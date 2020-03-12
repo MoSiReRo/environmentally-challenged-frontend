@@ -19,7 +19,10 @@ class App extends React.Component {
       {challengeId: "96696b2a-62ee-11ea-bc55-0242ac130003", challengeDesc: "Use a reusable water bottle", completed: 1, userId: 1, accepted: 0, tips: "Doing this for a year will save YYY"},
       {challengeId: "96696c10-62ee-11ea-bc55-0242ac130003", challengeDesc: "Switch all your bills and bank statements to paperless", completed: 1, userId: 1, accepted: 0, tips: "Doing this for a year will save ZZZ"}
     ],
-    todaysChallenge: {challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here"},
+    todaysChallenge: {challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 1, tips: "Tips go here"},
+    isAccepted: false,
+    isCompleted: false,
+    isEndOfDay: false
   };
 
  
@@ -29,7 +32,7 @@ class App extends React.Component {
 
     // generates random task at given time every 24hrs
     const currentTime = new Date().getTime();  //current unix timestamp
-    const execTime = new Date().setHours(12,12,0,0);  //API call time = today at 05:00
+    const execTime = new Date().setHours(5,0,0,0);  //API call time = today at 05:00
     let timeLeft;
     if(currentTime < execTime) {
       //it's currently earlier than 05:00
@@ -84,9 +87,48 @@ class App extends React.Component {
     acceptedChallenge.accepted = 1;
     // update state
     this.setState({
-      todaysChallenge: acceptedChallenge
+      todaysChallenge: acceptedChallenge,
+      isAccepted: true
     });
     console.log(acceptedChallenge);
+  }
+
+
+  challengeCompleted = () => {
+    // get todaysChallenge from state
+    const completedChallenge = this.state.todaysChallenge;
+    // update completed: 1
+    completedChallenge.completed = 1;
+    // update state
+    this.setState({
+      todaysChallenge: completedChallenge,
+      isCompleted: true,
+      isEndOfDay: true
+    });
+    console.log(completedChallenge);
+    // get array of completed challenges
+    const doneChallengeList = this.state.completedChallenges;
+    // push todaysChallenge into completed array
+    doneChallengeList.push(completedChallenge);
+    // update state of completed array, counter then counts it
+    this.setState({
+      completedChallenges: doneChallengeList
+    });
+  }
+
+
+// function that runs if you don't complete an accepted challenge
+// finishes day, hiding buttons and leaving failed challenge to be regenerated
+  finishDay = () => {
+    // get todaysChallenge from state
+    const failedChallenge = this.state.todaysChallenge;
+    // keep completed as 0
+    failedChallenge.completed = 0;
+    // update state to end of day so button disappears on click
+    this.setState({
+      isEndOfDay: true
+    });
+    console.log(failedChallenge);
   }
 
 
@@ -100,6 +142,10 @@ class App extends React.Component {
           todaysChallenge={this.state.todaysChallenge}
           newChallengeFunc={this.newChallenge}
           challengeAcceptedFunc={this.challengeAccepted}
+          challengeCompletedFunc={this.challengeCompleted}
+          isAccepted={this.state.isAccepted}
+          isEndOfDay={this.state.isEndOfDay}
+          finishDayFunc={this.finishDay}
         />
         <MobileTip
           todaysChallengeTip={this.state.todaysChallenge.tips}
