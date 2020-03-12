@@ -14,7 +14,7 @@ class App extends React.Component {
     completedChallenges: [
 
     ],
-    todaysChallenge: { challengeId: "1", challengeDesc: "no challenge selected - original state", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
+    todaysChallenge: { challengeId: "1", challengeDesc: "None selected yet - click 'Try Another'", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
     isAccepted: false,
     isCompleted: false,
     isEndOfDay: false
@@ -47,13 +47,7 @@ class App extends React.Component {
       .then(response => {
         let acceptedChallenge = response.data.challenge[0];
         console.log(acceptedChallenge);
-        // I tried `if (acceptedChallenge==[])` and for some reason it didn't work even though that's what it was console logging as!!
-        if (acceptedChallenge === undefined) {
-          this.setState({
-            todaysChallenge: { challengeId: "1", challengeDesc: "No challenge accepted - I want this to displayyy!", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
-          });
-        } else {
-          // handle success
+        if (acceptedChallenge != undefined) {
           this.setState({
             todaysChallenge: acceptedChallenge
           });
