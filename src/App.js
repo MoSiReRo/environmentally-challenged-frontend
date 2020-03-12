@@ -19,7 +19,7 @@ class App extends React.Component {
       {challengeId: "96696b2a-62ee-11ea-bc55-0242ac130003", challengeDesc: "Use a reusable water bottle", completed: 1, userId: 1, accepted: 0, tips: "Doing this for a year will save YYY"},
       {challengeId: "96696c10-62ee-11ea-bc55-0242ac130003", challengeDesc: "Switch all your bills and bank statements to paperless", completed: 1, userId: 1, accepted: 0, tips: "Doing this for a year will save ZZZ"}
     ],
-    todaysChallenge: {challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here"},
+    todaysChallenge: {challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 1, tips: "Tips go here"},
     isAccepted: false,
     isCompleted: false,
     isEndOfDay: false
