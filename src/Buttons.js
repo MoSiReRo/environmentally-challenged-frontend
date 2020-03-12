@@ -11,7 +11,7 @@ class Buttons extends React.Component {
     // }
 
     render() {
-        const {newChallengeFunc, challengeAcceptedFunc, isAccepted, challengeCompletedFunc, isEndOfDay} = this.props
+        const {newChallengeFunc, challengeAcceptedFunc, isAccepted, challengeCompletedFunc, finishDayFunc, isEndOfDay} = this.props
         return (
             <div className="row">
                <div className="col-6 acceptButton">
@@ -21,7 +21,7 @@ class Buttons extends React.Component {
                </div>
                <div className="col-6 tryAnother">
                {!isEndOfDay &&
-               <input type="button" className="btn btn-primary btn-sm" value={isAccepted ? "Try another time" : "Try Another"} onClick={isAccepted ? challengeCompletedFunc : newChallengeFunc}/>
+               <input type="button" className="btn btn-primary btn-sm" value={isAccepted ? "Try another time" : "Try Another"} onClick={isAccepted ? finishDayFunc : newChallengeFunc}/>
                 }
                </div>
             </div>

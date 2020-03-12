@@ -105,7 +105,23 @@ class App extends React.Component {
       isCompleted: true,
       isEndOfDay: true
     });
-    console.log(completedChallenge)
+    console.log(completedChallenge);
+  }
+
+  
+// function that runs if you don't complete an accepted challenge
+// finishes day, hiding buttons and leaving failed challenge to be regenerated
+
+  finishDay = () => {
+    // get todaysChallenge from state
+    const failedChallenge = this.state.todaysChallenge;
+    // keep completed as 0
+    failedChallenge.completed = 0;
+    // update state to end of day so button disappears on click
+    this.setState({
+      isEndOfDay: true
+    });
+    console.log(failedChallenge);
   }
 
 
@@ -122,6 +138,7 @@ class App extends React.Component {
           challengeCompletedFunc={this.challengeCompleted}
           isAccepted={this.state.isAccepted}
           isEndOfDay={this.state.isEndOfDay}
+          finishDayFunc={this.finishDay}
         />
         <MobileTip
           todaysChallengeTip={this.state.todaysChallenge.tips}
