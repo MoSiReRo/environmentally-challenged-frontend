@@ -106,12 +106,19 @@ class App extends React.Component {
       isEndOfDay: true
     });
     console.log(completedChallenge);
+    // get array of completed challenges
+    const doneChallengeList = this.state.completedChallenges;
+    // push todaysChallenge into completed array
+    doneChallengeList.push(completedChallenge);
+    // update state of completed array, counter then counts it
+    this.setState({
+      completedChallenges: doneChallengeList
+    });
   }
 
-  
+
 // function that runs if you don't complete an accepted challenge
 // finishes day, hiding buttons and leaving failed challenge to be regenerated
-
   finishDay = () => {
     // get todaysChallenge from state
     const failedChallenge = this.state.todaysChallenge;
