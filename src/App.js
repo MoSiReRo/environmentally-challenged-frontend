@@ -14,7 +14,7 @@ class App extends React.Component {
     completedChallenges: [
 
     ],
-    todaysChallenge: { challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
+    todaysChallenge: { challengeId: "1", challengeDesc: "no challenge selected - original state", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
     isAccepted: false,
     isCompleted: false,
     isEndOfDay: false
@@ -41,6 +41,29 @@ class App extends React.Component {
         //handle error
         console.error(error);
       });
+
+
+    axios.get('https://wqsn40ohub.execute-api.eu-west-2.amazonaws.com/dev/accepted-challenge')
+      .then(response => {
+        let acceptedChallenge = response.data.challenge[0];
+        console.log(acceptedChallenge);
+        // I tried `if (acceptedChallenge==[])` and for some reason it didn't work even though that's what it was console logging as!!
+        if (acceptedChallenge === undefined) {
+          this.setState({
+            todaysChallenge: { challengeId: "1", challengeDesc: "No challenge accepted - I want this to displayyy!", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
+          });
+        } else {
+          // handle success
+          this.setState({
+            todaysChallenge: acceptedChallenge
+          });
+        }
+      })
+      .catch(error => {
+        //handle error
+        console.error(error);
+      });
+
 
     // displays current date
     this.getDate();
