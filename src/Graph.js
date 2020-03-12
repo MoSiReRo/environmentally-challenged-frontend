@@ -1,6 +1,6 @@
 import React from 'react';
-import { CircularProgressbar, buildStyles} from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import { CircularProgressbarWithChildren} from 'react-circular-progressbar';
+
 
 class Graph extends React.Component {
 
@@ -15,24 +15,15 @@ class Graph extends React.Component {
 
     render() {
 
-        const value = 0.25;
+        const value = this.props.counter
 
         return (
             <div>
-                <CircularProgressbar 
-                value={value} 
-                maxValue={90} 
-                text={`${value * 100}%`} 
-                styles={buildStyles({
-                    strokeLinecap: 'butt',
-                    textSize: '16px',
-                    pathTransitionDuration: 0.5,
-                    pathColor: 'red',
-                    textColor: 'blue',
-                    trailColor: 'green',
-                    backgroundColor: 'pink',
-                })}
-                    />; 
+                <CircularProgressbarWithChildren value={value} 
+                maxValue={21} 
+                text={`Completed: ${value}`} > 
+
+                </CircularProgressbarWithChildren>  
             </div>
         )
     }
