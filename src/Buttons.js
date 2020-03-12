@@ -6,7 +6,7 @@ class Buttons extends React.Component {
     //     this.props.newChallengeFunc(this.props.newChallenge);
     // }
 
-    // challengeAccepted = ()=> {
+    // challengeAccepted = () => {
     //     this.props.challengeAcceptedFunc(this.props.challengeAccepted);
     // }
 
