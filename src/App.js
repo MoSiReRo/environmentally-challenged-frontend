@@ -17,7 +17,8 @@ class App extends React.Component {
     todaysChallenge: { challengeId: "1", challengeDesc: "None selected yet - click 'Try Another'", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
     isAccepted: false,
     isCompleted: false,
-    isEndOfDay: false
+    isEndOfDay: false,
+    successfulDay: false
   };
 
 
@@ -49,7 +50,8 @@ class App extends React.Component {
         console.log(acceptedChallenge);
         if (acceptedChallenge != undefined) {
           this.setState({
-            todaysChallenge: acceptedChallenge
+            todaysChallenge: acceptedChallenge,
+            isAccepted: true
           });
         }
       })
@@ -156,7 +158,8 @@ class App extends React.Component {
         this.setState({
           todaysChallenge: completedChallenge,
           isCompleted: true,
-          isEndOfDay: true
+          isEndOfDay: true,
+          successfulDay: true
         });
         console.log(completedChallenge);
         // get array of completed challenges
@@ -206,6 +209,7 @@ class App extends React.Component {
           challengeCompletedFunc={this.challengeCompleted}
           isAccepted={this.state.isAccepted}
           isEndOfDay={this.state.isEndOfDay}
+          successfulDay={this.state.successfulDay}
           finishDayFunc={this.finishDay}
           counter={this.state.completedChallenges.length}
         />
