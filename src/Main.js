@@ -18,6 +18,7 @@ class Main extends React.Component {
                      todaysChallenge={this.props.todaysChallenge}
                      newChallengeFunc={this.props.newChallengeFunc}
                      isEndOfDay={this.props.isEndOfDay}
+                     successfulDay={this.props.successfulDay}
                   />
                </div>
             </div>
@@ -32,6 +33,7 @@ class Main extends React.Component {
                      challengeCompletedFunc={this.props.challengeCompletedFunc}
                      isAccepted={this.props.isAccepted}
                      isEndOfDay={this.props.isEndOfDay}
+                     successfulDay={this.props.successfulDay}
                      finishDayFunc={this.props.finishDayFunc}
                   />
                </div>

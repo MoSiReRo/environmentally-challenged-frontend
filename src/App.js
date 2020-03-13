@@ -14,10 +14,11 @@ class App extends React.Component {
     completedChallenges: [
 
     ],
-    todaysChallenge: { challengeId: "1", challengeDesc: "", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
+    todaysChallenge: { challengeId: "1", challengeDesc: "None selected yet - click 'Try Another'", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
     isAccepted: false,
     isCompleted: false,
-    isEndOfDay: false
+    isEndOfDay: false,
+    successfulDay: false
   };
 
 
@@ -41,6 +42,24 @@ class App extends React.Component {
         //handle error
         console.error(error);
       });
+
+
+    axios.get('https://wqsn40ohub.execute-api.eu-west-2.amazonaws.com/dev/accepted-challenge')
+      .then(response => {
+        let acceptedChallenge = response.data.challenge[0];
+        console.log(acceptedChallenge);
+        if (acceptedChallenge != undefined) {
+          this.setState({
+            todaysChallenge: acceptedChallenge,
+            isAccepted: true
+          });
+        }
+      })
+      .catch(error => {
+        //handle error
+        console.error(error);
+      });
+
 
     // displays current date
     this.getDate();
@@ -139,7 +158,8 @@ class App extends React.Component {
         this.setState({
           todaysChallenge: completedChallenge,
           isCompleted: true,
-          isEndOfDay: true
+          isEndOfDay: true,
+          successfulDay: true
         });
         console.log(completedChallenge);
         // get array of completed challenges
@@ -167,13 +187,29 @@ class App extends React.Component {
   finishDay = () => {
     // get todaysChallenge from state
     const failedChallenge = this.state.todaysChallenge;
+    const id = failedChallenge.challengeId;
+
     // keep completed as 0
     failedChallenge.completed = 0;
+
+    // Set accepted back to 0
+    failedChallenge.accepted = 0;
+
     // update state to end of day so button disappears on click
-    this.setState({
-      isEndOfDay: true
-    });
-    console.log(failedChallenge);
+    // Put request so accepted = 0 will update database
+
+    axios.put(`https://wqsn40ohub.execute-api.eu-west-2.amazonaws.com/dev/challenge/${id}`, failedChallenge)
+      .then(response => {
+        this.setState({
+          isEndOfDay: true
+        });
+        console.log(failedChallenge);
+      })
+      .catch(error => {
+        //handle error
+        console.error(error);
+        console.log(failedChallenge)
+      });
   }
 
 
@@ -189,6 +225,7 @@ class App extends React.Component {
           challengeCompletedFunc={this.challengeCompleted}
           isAccepted={this.state.isAccepted}
           isEndOfDay={this.state.isEndOfDay}
+          successfulDay={this.state.successfulDay}
           finishDayFunc={this.finishDay}
           counter={this.state.completedChallenges.length}
         />

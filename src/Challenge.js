@@ -6,10 +6,13 @@ class Challenge extends React.Component {
     render() {
 
         const dayEnd = this.props.isEndOfDay;
+        const successfulDay = this.props.successfulDay;
         let message;
 
-        if (dayEnd) {
-            message = "See you tomorrow!";
+        if (dayEnd && successfulDay) {
+            message = "Well done! See you tomorrow!";
+        } else if (dayEnd && successfulDay === false) {
+            message = "Try again tomorrow - see you then!"
         } else {
             message = `Today's Challenge:
             ${this.props.todaysChallenge.challengeDesc}`;
