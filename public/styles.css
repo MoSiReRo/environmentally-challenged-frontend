@@ -1,43 +1,31 @@
-/*
- * react-circular-progressbar styles
- * All of the styles in this file are configurable!
- */
-
- .CircularProgressbar {
-  /*
-   * This fixes an issue where the CircularProgressbar svg has
-   * 0 width inside a "display: flex" container, and thus not visible.
-   */
-  width: 20%;
-  /*
-   * This fixes a centering issue with CircularProgressbarWithChildren:
-   * https://github.com/kevinsqi/react-circular-progressbar/issues/94
-   */
-  vertical-align: middle;
-  
+.CircularProgressbar {
+  width: 400px;
+  vertical-align: middle; 
+  fill: #6fb98f;
 }
 
 .CircularProgressbar .CircularProgressbar-path {
-  stroke: #3e98c7;
-  stroke-linecap: round;
+  stroke: #ffd800;
+  stroke-linecap: butt;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
 .CircularProgressbar .CircularProgressbar-trail {
-  stroke: #d6d6d6;
+  stroke: #6fb98f;;
   /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
   stroke-linecap: round;
 }
 
 .CircularProgressbar .CircularProgressbar-text {
-  fill: #3e98c7;
-  font-size: 20px;
-  dominant-baseline: middle;
+  fill: #ffd800;
+  font-size: 10px;
   text-anchor: middle;
+  white-space: pre-wrap;
+  line-break: break-spaces;
 }
 
 .CircularProgressbar .CircularProgressbar-background {
-  fill: #d6d6d6;
+  fill: #6fb98f;
 }
 
 /*
@@ -65,21 +53,25 @@
   stroke: transparent;
 }
 
-
-
-
 body {
-  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
+  background-color: #004445;
   background-size: cover;
   background-attachment: fixed;
+  height: auto;
+}
+
+.container-fluid {
+  background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print");
+  background-color: #004445;
 }
 
 .counter {
+  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
   font-family: 'Heebo', sans-serif;
   font-weight: 100;
   /* background-color: #8ab446; */
-  color: white;
-  padding-top: 1em;
+  color: #004445;
   padding-left: 2em;
   padding-bottom: 3em;
   line-height: 0em;
@@ -89,84 +81,93 @@ h1 {
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
   text-align: left;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .title {
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
-  color: white;
-  padding-left: 2em;
+  color: #ffd800;
+  padding-left: 1em;
+  background-color: transparent;
 }
 
 .dateTime {
-  /* background-color: #8ab446; */
+  background-color: transparent;
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
-  color: white;
-  padding-left: 3em;
+  font-weight: 300;
+  color: #ffd800;;
+  padding-top: 3em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  white-space: pre-wrap;
 }
 
 .graph {
-  background-color: white;
+  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
   font-family: 'Heebo', sans-serif;
   font-weight: 100;
-  color: #8ab446;
-  padding-top: 1em;
+  color: #2c7873;
+  padding-top: 0.5em;
 }
 .challenge {
-  background-color: white;
+  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
   font-family: 'Heebo', sans-serif;
-  color: #8ab446;
+  color: #ffd800;
+  background-color: #004445;
   text-align: center;
   font-size: 2.5em;
-  font-weight: 100;
+  font-weight: 300;
   white-space: pre-wrap;
 }
 
 .tipHint {
-  background-color: white;
+  background-color: #ffd800;
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
-  color: #8ab446;
+  font-weight: 300;
+  color: #2c7873;
   text-align: left;
   padding-left: 3em;
 }
 
 .tipHintMobile {
-  background-color: white;
+  background-color: #ffd800;
   font-family: 'Heebo', sans-serif;
-  color: #8ab446;
+  color: #2c7873;
   text-align: left;
-  padding-left: 2em;
-  padding-top: 3em;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .boxForButtons {
-  background-color: white;
+  background-color: transparent;
 }
 
 .acceptButton {
-  background-color: white;
+  /* background-color: #004445; */
   font-family: 'Heebo', sans-serif;
-  color: #8ab446;
+  color: #004445;
   padding-left: 11em;
 }
 .tryAnother {
-  background-color: white;
+  background-color: transparent;
   font-family: 'Heebo', sans-serif;
-  color: #8ab446;
+  color: #2c7873;
   text-align: left;
 }
 
 .footer {
-  /* background-color: #8ab446; */
+  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
+  background-color: #004445;
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 0.9em;
-  color: white;
+  color: #ffd800;
   text-align: left;
-  padding-top: 3em;
-  padding-left: 2em;
+  padding-top: 2em;
+  padding-left: 1em;
   padding-bottom: 2em;
 }
 
