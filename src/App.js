@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from './Counter';
 import Header from './Header';
 import Main from './Main';
 import MobileTip from './MobileTip';
@@ -50,7 +51,7 @@ class App extends React.Component {
       .then(response => {
         let acceptedChallenge = response.data.challenge[0];
         console.log(acceptedChallenge);
-        if (acceptedChallenge != undefined) {
+        if (acceptedChallenge !== undefined) {
           this.setState({
             todaysChallenge: acceptedChallenge,
             isAccepted: true
@@ -194,9 +195,15 @@ class App extends React.Component {
   }
 
 
+  
+
+
   render() {
     return (
       <div className="container-fluid">
+        <Counter
+          treeCounter={this.state.completedChallenges.length} 
+          />
         <Header/>
         <Main
           todaysChallenge={this.state.todaysChallenge}
