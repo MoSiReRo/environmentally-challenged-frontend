@@ -11,7 +11,7 @@ class Main extends React.Component {
       return (
          <div>
             <div className="row">
-               <div className="col-12 col-md-12 graph challenge">
+               <div className="col-12 graph challenge">
                   <Graph
                      counter={this.props.counter} />
                   <Challenge
@@ -23,7 +23,7 @@ class Main extends React.Component {
                </div>
             </div>
             <div className="row">
-               <div className="col-12 col-md-6 boxForButtons">
+               <div className="col-12 boxForButtons"> 
                   <Buttons
                      newChallengeFunc={this.props.newChallengeFunc}
                      challengeAcceptedFunc={this.props.challengeAcceptedFunc}

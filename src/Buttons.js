@@ -14,20 +14,20 @@ class Buttons extends React.Component {
         const { newChallengeFunc, challengeAcceptedFunc, isAccepted, challengeCompletedFunc, finishDayFunc, isEndOfDay } = this.props
         return (
             <div className="row">
-                <div className="col-6 acceptButton">
+                <div className="col-6 leftButtonBox">
                     {!isEndOfDay &&
                         <input type="button"
-                            className="btn btn-primary btn-sm"
+                            className="btn accept"
                             value={isAccepted ? "I did it!" : "Accept"}
                             onClick={isAccepted ? challengeCompletedFunc : challengeAcceptedFunc}
                         />
                     }
                 </div>
-                <div className="col-6 tryAnother">
+                <div className="col-6 rightButtonBox">
                     {!isEndOfDay &&
                         <input type="button"
-                            className="btn btn-primary btn-sm"
-                            value={isAccepted ? "Try another time" : "Try Another"}
+                            className="btn tryAnother"
+                            value={isAccepted ? " Try another time" : "Try Another"}
                             onClick={isAccepted ? finishDayFunc : newChallengeFunc}
                         />
                     }
