@@ -21,6 +21,9 @@ class App extends React.Component {
     successfulDay: false
   };
 
+  componentWillMount() {
+    setInterval(this.date, 1000)
+  }
 
   componentDidMount() {
 
