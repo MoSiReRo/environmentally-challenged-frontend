@@ -11,6 +11,12 @@ class TodayDate extends React.Component {
         };
       }
 
+    callMe(){
+      setInterval(() => {
+        this.setState({date : new Date()})
+      }, 1000);
+    }  
+
     render() {
 
         const day = moment().format("dddd");
@@ -19,6 +25,7 @@ class TodayDate extends React.Component {
         return (
             <div className="col-12 col-md-3 dateTime">
             <span style={{fontWeight: '500'}} >{day} {date}</span> <br /> {time}
+            {this.callMe()}
          </div>
         );
     }
