@@ -1,7 +1,7 @@
 .CircularProgressbar {
   width: 400px;
   vertical-align: middle; 
-  fill: #6fb98f;
+  fill:;
 }
 
 .CircularProgressbar .CircularProgressbar-path {
@@ -11,7 +11,7 @@
 }
 
 .CircularProgressbar .CircularProgressbar-trail {
-  stroke: #6fb98f;;
+  stroke: transparent;
   /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
   stroke-linecap: round;
 }
@@ -24,37 +24,7 @@
   line-break: break-spaces;
 }
 
-.CircularProgressbar .CircularProgressbar-background {
-  fill: #6fb98f;
-}
-
-/*
- * Sample background styles. Use these with e.g.:
- *
- *   <CircularProgressbar
- *     className="CircularProgressbar-inverted"
- *     background
- *     percentage={50}
- *   />
- */
-.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
-  fill: #3e98c7;
-}
-
-.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
-  fill: #fff;
-}
-
-.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
-  stroke: #fff;
-}
-
-.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
-  stroke: transparent;
-}
-
 body {
-  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
   background-color: #004445;
   background-size: cover;
   background-attachment: fixed;
@@ -62,7 +32,7 @@ body {
 }
 
 .container-fluid {
-  background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print");
+  background-image: url("images/simon-mumenthaler-Q7oMOmU-SqY-unsplash.jpg");
   background-color: #004445;
 }
 
@@ -82,25 +52,27 @@ body {
 h1 { 
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
+  color: #ffd800;
   text-align: left;
   padding-top: 1em;
   padding-bottom: 1em;
+
 }
 
 .title {
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
-  color: #ffd800;
   padding-left: 1em;
-  background-color: transparent;
+  background-color: rgb(128, 128, 128, 0.6);
 }
 
 .dateTime {
   background-color: transparent;
   font-family: 'Heebo', sans-serif;
+  font-size: 1.2em;
   font-weight: 300;
   color: #ffd800;;
-  padding-top: 3em;
+  padding-top: 2.4em;
   padding-left: 1em;
   padding-bottom: 1em;
   white-space: pre-wrap;
@@ -113,11 +85,12 @@ h1 {
   color: #2c7873;
   padding-top: 0.5em;
 }
+
 .challenge {
   /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
   font-family: 'Heebo', sans-serif;
   color: #ffd800;
-  background-color: #004445;
+  background-color: transparent;
   text-align: center;
   font-size: 2.5em;
   font-weight: 300;
@@ -130,7 +103,7 @@ h1 {
   font-weight: 300;
   color: #2c7873;
   text-align: left;
-  padding-left: 3em;
+  padding-left: 1em;
 }
 
 .tipHintMobile {
@@ -144,29 +117,42 @@ h1 {
 }
 
 .boxForButtons {
+  width: fit-content;
   background-color: transparent;
 }
 
-.acceptButton {
-  /* background-color: #004445; */
-  font-family: 'Heebo', sans-serif;
-  color: #004445;
-  padding-left: 11em;
-}
-.tryAnother {
+.leftButtonBox {
   background-color: transparent;
-  font-family: 'Heebo', sans-serif;
-  color: #2c7873;
-  text-align: left;
+  text-align: right; 
+  padding: 10px; 
 }
+
+.rightButtonBox { 
+  background-color: transparent;
+  text-align: left;
+  padding: 10px;
+}
+
+.tryAnother {
+  background-color: white;
+}
+
+.accept {
+  background-color: white
+}
+
+/* border: none;
+  
+  display: inline-block;
+  font-size:;
+  margin:; */
 
 .footer {
-  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
-  background-color: #004445;
+  background-color: transparent;
   font-family: 'Heebo', sans-serif;
   font-weight: 300;
   font-size: 0.9em;
-  color: #ffd800;
+  color: white;
   text-align: left;
   padding-top: 2em;
   padding-left: 1em;
