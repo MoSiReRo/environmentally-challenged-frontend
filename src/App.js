@@ -8,7 +8,6 @@ import axios from 'axios';
 class App extends React.Component {
 
   state = {
-    date: "",
     uncompletedChallenges: [
     ],
     completedChallenges: [
@@ -64,10 +63,6 @@ class App extends React.Component {
       });
 
 
-    // displays current date
-    this.getDate();
-
-
     // generates random task at given time every 24hrs
     const currentTime = new Date().getTime();  //current unix timestamp
     const execTime = new Date().setHours(5, 0, 0, 0);  //API call time = today at 05:00
@@ -87,24 +82,7 @@ class App extends React.Component {
     clearInterval(this.interval);
   }
 
-  getDate = () => {
-    let today = new Date()
-    let dd = today.getDate();
-    let mm = today.getMonth() + 1;
-    let yyyy = today.getFullYear();
-    if (dd < 10) {
-      dd = `0${dd}`;
-    }
-    if (mm < 10) {
-      mm = `0${mm}`;
-    }
-    const fullDate = dd + "/" + mm + "/" + yyyy;
-
-    this.setState({
-      date: fullDate
-    });
-  }
-
+  
   // Picks a random challenge from the array when 'Try Another' button is clicked
   // Also same function used to generate challenge at start of day
   newChallenge = () => {
@@ -219,8 +197,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <Header
-          getDateFunc={this.state.date} />
+        <Header/>
         <Main
           todaysChallenge={this.state.todaysChallenge}
           newChallengeFunc={this.newChallenge}

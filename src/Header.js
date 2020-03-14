@@ -14,7 +14,7 @@ class Header extends React.Component {
                Challenged</h1>
          </div>
          
-         <TodayDate getDateFunc={this.props.getDateFunc}/>
+         <TodayDate/>
       </div>
         );
     }
