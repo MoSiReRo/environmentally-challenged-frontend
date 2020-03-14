@@ -12,8 +12,8 @@ class Main extends React.Component {
          <div>
             <div className="row">
                <div className="col-12 col-md-12 graph challenge">
-                  <Graph 
-                     counter={this.props.counter}/>
+                  <Graph
+                     counter={this.props.counter} />
                   <Challenge
                      todaysChallenge={this.props.todaysChallenge}
                      newChallengeFunc={this.props.newChallengeFunc}
@@ -22,9 +22,6 @@ class Main extends React.Component {
                </div>
             </div>
             <div className="row">
-               <TipLarge
-                  todaysChallengeTip={this.props.todaysChallenge.tips}
-               />
                <div className="col-12 col-md-6 boxForButtons">
                   <Buttons
                      newChallengeFunc={this.props.newChallengeFunc}
@@ -35,6 +32,10 @@ class Main extends React.Component {
                      finishDayFunc={this.props.finishDayFunc}
                   />
                </div>
+               <TipLarge
+                  todaysChallengeTip={this.props.todaysChallenge.tips}
+               />
+
             </div>
          </div>
       );

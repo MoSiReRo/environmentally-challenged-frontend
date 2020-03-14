@@ -14,10 +14,11 @@ class TodayDate extends React.Component {
     render() {
 
         const day = moment().format("dddd");
-        const date = moment().format("D MMMM YYYY h:mm a");
+        const date = moment().format("D MMMM YYYY");
+        const time = moment().format("h:mm a");
         return (
-            <div className="col-6 col-md-3 dateTime">
-            {day} {date}
+            <div className="col-12 col-md-3 dateTime">
+            <span style={{fontWeight: '500'}} >{day} {date}</span> <br /> {time}
          </div>
         );
     }

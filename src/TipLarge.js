@@ -5,7 +5,7 @@ class TipLarge extends React.Component {
 
     render() {
         return (
-            <div className="col-12 col-md-3 tipHint d-none d-md-block">
+            <div className="col-12 tipHint d-none d-md-block">
                 {this.props.todaysChallengeTip}
             </div>
         );
