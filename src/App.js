@@ -14,7 +14,15 @@ class App extends React.Component {
     completedChallenges: [
 
     ],
-    todaysChallenge: { challengeId: "1", challengeDesc: "None selected yet - click 'Try Another'", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
+    todaysChallenge: {
+      challengeId: "1",
+      challengeDesc: "None selected yet - click 'Try Another'",
+      completed: 0,
+      userId: 1,
+      accepted: 0,
+      // Need a default statement for tips - corny, but something like this?
+      tips: "Be the change you want to see in the world"
+    },
     isAccepted: false,
     isCompleted: false,
     isEndOfDay: false,
@@ -220,8 +228,6 @@ class App extends React.Component {
       <div className="container-fluid">
         {/* Stylesheet needs to be here so it can update from state*/}
         <link rel="stylesheet" type="text/css" href={process.env.PUBLIC_URL + '/' + this.state.stylePath} />
-        {/* Temporary button for changing themes - change to drop down in footer? */}
-        <button type="button" onClick={this.changeStyles.bind(this)}>Click to update stylesheet</button>
         <Counter
           treeCounter={this.state.completedChallenges.length}
         />
@@ -240,7 +246,9 @@ class App extends React.Component {
         <MobileTip
           todaysChallengeTip={this.state.todaysChallenge.tips}
         />
-        <Footer />
+        <Footer 
+          changeThemes={this.changeStyles}
+        />
       </div>
     );
   }
