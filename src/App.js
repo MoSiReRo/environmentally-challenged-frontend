@@ -18,7 +18,8 @@ class App extends React.Component {
     isAccepted: false,
     isCompleted: false,
     isEndOfDay: false,
-    successfulDay: false
+    successfulDay: false,
+    stylePath: "styles.css"
   };
 
   componentWillMount() {
@@ -51,7 +52,7 @@ class App extends React.Component {
       .then(response => {
         let acceptedChallenge = response.data.challenge[0];
         console.log(acceptedChallenge);
-        if (acceptedChallenge !== undefined) {
+        if (acceptedChallenge != undefined) {
           this.setState({
             todaysChallenge: acceptedChallenge,
             isAccepted: true
@@ -83,7 +84,7 @@ class App extends React.Component {
     clearInterval(this.interval);
   }
 
-  
+
   // Picks a random challenge from the array when 'Try Another' button is clicked
   // Also same function used to generate challenge at start of day
   newChallenge = () => {
@@ -195,16 +196,36 @@ class App extends React.Component {
   }
 
 
-  
+  changeStyles = () => {
+    if (this.state.stylePath === "styles.css") {
+      this.setState({
+        stylePath: "styleFerns.css"
+      });
+    } else if (this.state.stylePath === "styleFerns.css") {
+      this.setState({
+        stylePath: "styleAccessibility.css"
+      });
+    } else if (this.state.stylePath === "styleAccessibility.css") {
+      this.setState({
+        stylePath: "styles.css"
+      });
+    }
+
+    console.log(this.state.stylePath)
+  }
 
 
   render() {
     return (
       <div className="container-fluid">
+        {/* Stylesheet needs to be here so it can update from state*/}
+        <link rel="stylesheet" type="text/css" href={process.env.PUBLIC_URL + '/' + this.state.stylePath} />
+        {/* Temporary button for changing themes - change to drop down in footer? */}
+        <button type="button" onClick={this.changeStyles.bind(this)}>Click to update stylesheet</button>
         <Counter
-          treeCounter={this.state.completedChallenges.length} 
-          />
-        <Header/>
+          treeCounter={this.state.completedChallenges.length}
+        />
+        <Header />
         <Main
           todaysChallenge={this.state.todaysChallenge}
           newChallengeFunc={this.newChallenge}

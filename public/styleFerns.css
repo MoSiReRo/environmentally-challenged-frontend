@@ -1,0 +1,169 @@
+.CircularProgressbar {
+  width: 300px;
+  vertical-align: middle; 
+  
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #8ab446;
+  stroke-linecap: butt;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: transparent;
+  /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
+  stroke-linecap: round;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #8ab446;
+  font-size: 10px;
+  text-anchor: middle;
+  white-space: pre-wrap;
+  line-break: break-spaces;
+}
+
+body {
+  background-color: #004445;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+}
+
+.container-fluid {
+  background-color: #8ab446;
+}
+
+.counter {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  background-color: #8ab446;
+  color: white;
+  padding-top: 1em;
+  padding-left: 2em;
+  padding-bottom: 3em;
+  line-height: 0em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 { 
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  text-align: left;
+}
+
+.title {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  color: white;
+  padding-left: 2em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dateTime {
+  background-color: #8ab446;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  color: white;
+  padding-left: 3em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.graph {
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  color: #8ab446;
+  padding-top: 1em;
+}
+.challenge {
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 100;
+}
+
+.tipHint {
+  background-color: #8ab446;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  color: white;
+  text-align: left;
+  padding-left: 3em;
+}
+
+.tipHintMobile {
+  background-color: #8ab446;
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  text-align: left;
+  padding-left: 2em;
+  padding-top: 1em;
+}
+
+.boxForButtons {
+  width: fit-content;
+  background-color: white;
+}
+
+.leftButtonBox {
+  background-color: transparent;
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
+  padding-left: 11em;
+  text-align: right; 
+}
+
+.rightButtonBox { 
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
+  text-align: left;
+}
+
+.btn {
+  color:white;
+
+}
+
+.tryAnother {
+  background-color: #8ab446;
+}
+
+.accept {
+  background-color: #8ab446
+}
+
+/* border: none;
+  
+  display: inline-block;
+  font-size:;
+  margin:; */
+
+.footer {
+  background-color: #8ab446;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  font-size: 0.9em;
+  color: white;
+  text-align: left;
+  padding-top: 3em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background {
+  background-color: white;
+}
