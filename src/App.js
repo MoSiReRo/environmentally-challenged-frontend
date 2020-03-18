@@ -4,7 +4,9 @@ import Header from './Header';
 import Main from './Main';
 import MobileTip from './MobileTip';
 import Footer from './Footer';
+import UserProgressModal from './UserProgressModal';
 import axios from 'axios';
+import ReactModal from 'react-modal';
 
 class App extends React.Component {
 
@@ -27,9 +29,10 @@ class App extends React.Component {
     isCompleted: false,
     isEndOfDay: false,
     successfulDay: false,
-    stylePath: "styles.css"
+    stylePath: "styles.css",
+    showModal: false
   };
-
+  
   componentWillMount() {
     setInterval(this.date, 1000)
   }
@@ -223,9 +226,31 @@ class App extends React.Component {
   }
 
 
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+  }
+  
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  }
+
+
   render() {
     return (
       <div className="container-fluid">
+        <button onClick={this.handleOpenModal}>Your Progress</button>
+        <ReactModal 
+           isOpen={this.state.showModal}
+           contentLabel="Your Progress Modal"
+           closeTimeoutMS={200}
+           className="Modal"
+        >
+
+          <UserProgressModal 
+            completedChallengeCount={this.state.completedChallenges.length}
+            closeModalFunc={this.handleCloseModal}
+          />
+        </ReactModal>
         {/* Stylesheet needs to be here so it can update from state*/}
         <link rel="stylesheet" type="text/css" href={process.env.PUBLIC_URL + '/' + this.state.stylePath} />
         <Counter
