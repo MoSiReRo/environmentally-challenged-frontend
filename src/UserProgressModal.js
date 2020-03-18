@@ -22,7 +22,6 @@ class UserProgressModal extends React.Component {
         // 0 tasks = You haven't completed any tasks yet
         // 1-5 = Great start, etc.
         let encouragementText;
-
         if (completedChallengeCount === 0) {
             encouragementText = `You haven't completed any challenges yet. \nWhy not give it a go? Helping to save the world is easier than you think!`;
         } else if (completedChallengeCount === 1) {
@@ -31,8 +30,10 @@ class UserProgressModal extends React.Component {
             encouragementText = `You've completed ${completedChallengeCount} challenges so far. \nThat's a great start, why not try a few more?`;
         } else if (completedChallengeCount >= 7 && completedChallengeCount < 21) {
             encouragementText = `You've completed ${completedChallengeCount} challenges so far. \nWow, great job! Keep up all the great work.`
-        } else if (completedChallengeCount >= 21) {
-            encouragementText = `You've completed ${completedChallengeCount} challenges so far. \nIncredible! That means we've planted ${Math.floor(completedChallengeCount/21)} tree(s) thanks to you.\nYour actions are making a huge difference to the world.`
+        } else if (completedChallengeCount >= 21 && completedChallengeCount < 42) {
+            encouragementText = `You've completed ${completedChallengeCount} challenges so far. \nIncredible! That means we've planted one tree thanks to you.\nYour actions are making a huge difference to the world.`
+        } else if (completedChallengeCount >= 42 ) {
+            encouragementText = `You've completed ${completedChallengeCount} challenges so far. \nIncredible! That means we've planted ${Math.floor(completedChallengeCount/21)} trees thanks to you.\nYour actions are making a huge difference to the world.`
         } else {
             encouragementText = `You've completed ${completedChallengeCount} challenges so far.`;
         } 
