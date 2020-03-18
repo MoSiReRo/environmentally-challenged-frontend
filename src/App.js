@@ -4,7 +4,9 @@ import Header from './Header';
 import Main from './Main';
 import MobileTip from './MobileTip';
 import Footer from './Footer';
+import UserProgressModal from './UserProgressModal';
 import axios from 'axios';
+import ReactModal from 'react-modal';
 
 class App extends React.Component {
 
@@ -14,11 +16,21 @@ class App extends React.Component {
     completedChallenges: [
 
     ],
-    todaysChallenge: { challengeId: "1", challengeDesc: "None selected yet - click 'Try Another'", completed: 0, userId: 1, accepted: 0, tips: "Tips go here" },
+    todaysChallenge: {
+      challengeId: "1",
+      challengeDesc: "None selected yet - click 'Try Another'",
+      completed: 0,
+      userId: 1,
+      accepted: 0,
+      // Need a default statement for tips - corny, but something like this?
+      tips: "Be the change you want to see in the world"
+    },
     isAccepted: false,
     isCompleted: false,
     isEndOfDay: false,
-    successfulDay: false
+    successfulDay: false,
+    stylePath: "styles.css",
+    showModal: false
   };
 
   componentWillMount() {
@@ -50,7 +62,6 @@ class App extends React.Component {
     axios.get('https://wqsn40ohub.execute-api.eu-west-2.amazonaws.com/dev/accepted-challenge')
       .then(response => {
         let acceptedChallenge = response.data.challenge[0];
-        console.log(acceptedChallenge);
         if (acceptedChallenge !== undefined) {
           this.setState({
             todaysChallenge: acceptedChallenge,
@@ -83,14 +94,13 @@ class App extends React.Component {
     clearInterval(this.interval);
   }
 
-  
+
   // Picks a random challenge from the array when 'Try Another' button is clicked
   // Also same function used to generate challenge at start of day
   newChallenge = () => {
     const challenges = this.state.uncompletedChallenges;
     const i = (Math.floor(Math.random() * challenges.length));
     const randomChallenge = challenges[i];
-    console.log(randomChallenge);
     this.setState({
       todaysChallenge: randomChallenge
     })
@@ -103,7 +113,6 @@ class App extends React.Component {
     const id = acceptedChallenge.challengeId;
     // update accepted: 1 (use 0/1 rather than false/true bc that's how SQL stores booleans)
     acceptedChallenge.accepted = 1;
-    console.log(acceptedChallenge)
 
     axios.put(`https://wqsn40ohub.execute-api.eu-west-2.amazonaws.com/dev/challenge/${id}`, acceptedChallenge)
       .then(response => {
@@ -120,7 +129,6 @@ class App extends React.Component {
         console.log(acceptedChallenge)
       });
 
-    console.log(acceptedChallenge);
 
   }
 
@@ -143,7 +151,6 @@ class App extends React.Component {
           isEndOfDay: true,
           successfulDay: true
         });
-        console.log(completedChallenge);
         // get array of completed challenges
         const doneChallengeList = this.state.completedChallenges;
         // push todaysChallenge into completed array
@@ -185,7 +192,6 @@ class App extends React.Component {
         this.setState({
           isEndOfDay: true
         });
-        console.log(failedChallenge);
       })
       .catch(error => {
         //handle error
@@ -195,16 +201,54 @@ class App extends React.Component {
   }
 
 
-  
+  changeStyles = () => {
+    if (this.state.stylePath === "styles.css") {
+      this.setState({
+        stylePath: "styleFerns.css"
+      });
+    } else if (this.state.stylePath === "styleFerns.css") {
+      this.setState({
+        stylePath: "styleAccessibility.css"
+      });
+    } else if (this.state.stylePath === "styleAccessibility.css") {
+      this.setState({
+        stylePath: "styles.css"
+      });
+    }
+
+  }
+
+
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  }
 
 
   render() {
     return (
       <div className="container-fluid">
-        <Counter
-          treeCounter={this.state.completedChallenges.length} 
+        <ReactModal
+          isOpen={this.state.showModal}
+          contentLabel="Your Progress Modal"
+          closeTimeoutMS={200}
+          className="Modal"
+        >
+          <UserProgressModal
+            completedChallenges={this.state.completedChallenges}
+            closeModalFunc={this.handleCloseModal}
+            stylePath={this.state.stylePath}
           />
-        <Header/>
+        </ReactModal>
+        {/* Stylesheet needs to be here so it can update from state*/}
+        <link rel="stylesheet" type="text/css" href={process.env.PUBLIC_URL + '/' + this.state.stylePath} />
+        <Counter
+          treeCounter={this.state.completedChallenges.length}
+        />
+        <Header />
         <Main
           todaysChallenge={this.state.todaysChallenge}
           newChallengeFunc={this.newChallenge}
@@ -219,7 +263,11 @@ class App extends React.Component {
         <MobileTip
           todaysChallengeTip={this.state.todaysChallenge.tips}
         />
-        <Footer />
+        <Footer
+          changeThemes={this.changeStyles}
+          yourProgressButton={this.handleOpenModal}
+        />
+
       </div>
     );
   }

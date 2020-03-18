@@ -12,7 +12,7 @@ class Graph extends React.Component {
             <div>
                 <CircularProgressbarWithChildren value={value}
                     maxValue={21}
-                    text={`Completed ${value}`} >
+                    text={`Completed: ${value}`} >
                 </CircularProgressbarWithChildren>
             </div>
         )
