@@ -32,7 +32,7 @@ class App extends React.Component {
     stylePath: "styles.css",
     showModal: false
   };
-  
+
   componentWillMount() {
     setInterval(this.date, 1000)
   }
@@ -62,8 +62,7 @@ class App extends React.Component {
     axios.get('https://wqsn40ohub.execute-api.eu-west-2.amazonaws.com/dev/accepted-challenge')
       .then(response => {
         let acceptedChallenge = response.data.challenge[0];
-        console.log(acceptedChallenge);
-        if (acceptedChallenge != undefined) {
+        if (acceptedChallenge !== undefined) {
           this.setState({
             todaysChallenge: acceptedChallenge,
             isAccepted: true
@@ -102,7 +101,6 @@ class App extends React.Component {
     const challenges = this.state.uncompletedChallenges;
     const i = (Math.floor(Math.random() * challenges.length));
     const randomChallenge = challenges[i];
-    console.log(randomChallenge);
     this.setState({
       todaysChallenge: randomChallenge
     })
@@ -115,7 +113,6 @@ class App extends React.Component {
     const id = acceptedChallenge.challengeId;
     // update accepted: 1 (use 0/1 rather than false/true bc that's how SQL stores booleans)
     acceptedChallenge.accepted = 1;
-    console.log(acceptedChallenge)
 
     axios.put(`https://wqsn40ohub.execute-api.eu-west-2.amazonaws.com/dev/challenge/${id}`, acceptedChallenge)
       .then(response => {
@@ -132,7 +129,6 @@ class App extends React.Component {
         console.log(acceptedChallenge)
       });
 
-    console.log(acceptedChallenge);
 
   }
 
@@ -155,7 +151,6 @@ class App extends React.Component {
           isEndOfDay: true,
           successfulDay: true
         });
-        console.log(completedChallenge);
         // get array of completed challenges
         const doneChallengeList = this.state.completedChallenges;
         // push todaysChallenge into completed array
@@ -197,7 +192,6 @@ class App extends React.Component {
         this.setState({
           isEndOfDay: true
         });
-        console.log(failedChallenge);
       })
       .catch(error => {
         //handle error
@@ -222,14 +216,13 @@ class App extends React.Component {
       });
     }
 
-    console.log(this.state.stylePath)
   }
 
 
   handleOpenModal = () => {
     this.setState({ showModal: true });
   }
-  
+
   handleCloseModal = () => {
     this.setState({ showModal: false });
   }
@@ -238,17 +231,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <button onClick={this.handleOpenModal}>Your Progress</button>
-        <ReactModal 
-           isOpen={this.state.showModal}
-           contentLabel="Your Progress Modal"
-           closeTimeoutMS={200}
-           className="Modal"
+        <ReactModal
+          isOpen={this.state.showModal}
+          contentLabel="Your Progress Modal"
+          closeTimeoutMS={200}
+          className="Modal"
         >
-
-          <UserProgressModal 
-            completedChallengeCount={this.state.completedChallenges.length}
+          <UserProgressModal
+            completedChallenges={this.state.completedChallenges}
             closeModalFunc={this.handleCloseModal}
+            stylePath={this.state.stylePath}
           />
         </ReactModal>
         {/* Stylesheet needs to be here so it can update from state*/}
@@ -271,9 +263,11 @@ class App extends React.Component {
         <MobileTip
           todaysChallengeTip={this.state.todaysChallenge.tips}
         />
-        <Footer 
+        <Footer
           changeThemes={this.changeStyles}
+          yourProgressButton={this.handleOpenModal}
         />
+
       </div>
     );
   }

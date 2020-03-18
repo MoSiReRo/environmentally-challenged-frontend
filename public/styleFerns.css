@@ -150,6 +150,12 @@ h1 {
   background-color: #8ab446;
 }
 
+.closeModalButton {
+  background-color: #8ab446;
+  text-align: center;
+  bottom: 10px;
+}
+
 /* border: none;
   
   display: inline-block;
@@ -173,4 +179,66 @@ h1 {
 
 .background {
   background-color: white;
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  max-height: 100vh;
+  overflow-y: auto;
+  outline:none!important
+}
+
+.ModalTitle {
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 300;
+  white-space: pre-wrap;
+}
+
+.ModalText {
+  color: black;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+/* close button styling for modal - class name needs to stay as close because it's modifying Bootstrap code*/
+.close {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #8ab446;
+  text-shadow: none;
+  opacity: 1;
+  position: absolute;
+  right: 10px;
+}
+
+.close:hover {
+  color: #000;
+  text-decoration: none;
 }
