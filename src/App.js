@@ -234,6 +234,10 @@ class App extends React.Component {
       
         {/* Stylesheet needs to be here so it can update from state*/}
         <link rel="stylesheet" type="text/css" href={process.env.PUBLIC_URL + '/' + this.state.stylePath} />  
+        <Header/>
+        <Counter
+          treeCounter={this.state.completedChallenges.length}
+        />
         <ReactModal
           isOpen={this.state.showModal}
           contentLabel="Your Progress Modal"
