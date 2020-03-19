@@ -1,7 +1,6 @@
 .CircularProgressbar {
-    width: 400px;
-    vertical-align: middle; 
-    fill:;
+    width: 275px;
+    vertical-align: middle;
   }
   
   .CircularProgressbar .CircularProgressbar-path {
@@ -12,7 +11,6 @@
   
   .CircularProgressbar .CircularProgressbar-trail {
     stroke: transparent;
-    /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
     stroke-linecap: round;
   }
   
@@ -25,68 +23,61 @@
   }
   
   body {
-    background-color: #001c1d;
+    background-color: #142850;
     background-size: cover;
     background-attachment: fixed;
     height: auto;
   }
   
   .container-fluid {
-    background-color: #001c1d;
+    background-color: #142850;
   }
   
   .counter {
-    /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
     font-family: 'Heebo', sans-serif;
-    font-weight: 100;
-    /* background-color: #8ab446; */
-    /* color: #001c1d; */
+    font-size: 1.1em;
+    font-weight: 500;
     color: white;
+    line-height: 1.2em;
     padding-left: 2em;
-    padding-bottom: 3em;
-    line-height: 0em;
-    margin-top: 10px;
+    padding-top: 1.7em;
   }
   
   h1 { 
     font-family: 'Heebo', sans-serif;
     font-weight: 500;
     color: white;
+    line-height: 1em;
     text-align: left;
-    padding-top: 1em;
-    padding-bottom: 1em;
-  
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
   }
   
   .title {
     font-family: 'Heebo', sans-serif;
     font-weight: 500;
     padding-left: 1em;
-    background-color: rgb(128, 128, 128, 0.6);
+    background-color: rgb(255, 255, 255, 0.3);
   }
   
   .dateTime {
-    background-color: transparent;
+    background-color: rgb(255, 255, 255, 0.3);
     font-family: 'Heebo', sans-serif;
     font-size: 1.2em;
     font-weight: 300;
+    line-height: 1.2em;
     color: white;;
-    padding-top: 2.4em;
-    padding-left: 1em;
-    padding-bottom: 1em;
+    padding-top: 0.8em;
     white-space: pre-wrap;
   }
   
   .graph {
-    /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
     font-family: 'Heebo', sans-serif;
     font-weight: 100;
-    color: #2c7873;
-    padding-top: 0.5em;
+    margin-top: -2.6em;
   }
   
   .challenge {
-    /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
     font-family: 'Heebo', sans-serif;
     color: white;
     background-color: transparent;
@@ -97,20 +88,23 @@
   }
   
   .tipHint {
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0.3);
     font-family: 'Heebo', sans-serif;
     font-weight: 300;
-    color: #2c7873;
-    text-align: left;
+    color: white;
+    text-align: center;
     padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
   
   .tipHintMobile {
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0.3);
     font-family: 'Heebo', sans-serif;
-    color: #2c7873;
-    text-align: left;
-    padding-left: 1em;
+    font-size: 1em;
+    font-weight: 400;
+    color: #142850;
+    text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
   }
@@ -133,45 +127,78 @@
   }
   
   .tryAnother {
+    background-color: #142850;
+    border-radius: 0;
+    border-style: ridge;
+    border-color: white;
+    font-family: 'Heebo', sans-serif;
+    color: white;
+    margin-top: -1em;
+  }
+
+  .tryAnother:hover {
     background-color: white;
+    color: #142850;
+    text-decoration: none;
+    border-style: none;
   }
   
   .accept {
-    background-color: white
+    background-color: #142850;
+    border-radius: 0;
+    border-style: ridge;
+    border-color: white;
+    font-family: 'Heebo', sans-serif;
+    color: white;
+    margin-top: -1em;
+  }
+
+  .accept:hover {
+    background-color: white;
+    color: #142850;
+    text-decoration: none;
+    border-style: none;
   }
 
   .themesButton {
+    background-color: transparent;
+    border-color: white;
+    border-radius: 0;
+    font-family: 'Heebo', sans-serif;
+    color: white;
+    margin-left: -3em;
+    margin-top: -0.5em;
+  }
+  
+  .themesButton:hover {
     background-color: white;
+    color: #142850;
+    text-decoration: none;
+    border-style: none;
   }
 
   .closeModalButton {
     background-color: white;
     text-align: center;
-    bottom:   10px;
+    bottom: 10px;
   }
-  
-  /* border: none;
-    
-    display: inline-block;
-    font-size:;
-    margin:; */
-  
+
   .footer {
-    background-color: transparent;
+    background-color: #142850;
     font-family: 'Heebo', sans-serif;
     font-weight: 300;
     font-size: 0.9em;
     color: white;
+    line-height: 1em;
     text-align: left;
-    padding-top: 2em;
+    padding-top: 1.7em;
     padding-left: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 1.1em;
   }
   
   .ReactModal__Body--open {
     overflow: hidden;
   }
-  
   
   .Modal {
     position: absolute;
@@ -180,7 +207,7 @@
     right: 40px;
     bottom: 40px;
     border-radius: 8px;
-    background-color: black;
+    background-color: #142850;
     max-height: 100vh;
     overflow-y: auto;
     outline:none!important
@@ -189,16 +216,22 @@
   .ModalTitle {
     font-family: 'Heebo', sans-serif;
     color: white;
+    font-weight: 500;
     text-align: center;
     font-size: 2.5em;
-    font-weight: 600;
+    font-weight: 300;
     white-space: pre-wrap;
-  }
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
   
   .ModalText {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
     color: white;
     text-align: center;
     white-space: pre-wrap;
+    padding-bottom: 1em;
   }
   
   .ReactModal__Overlay {
@@ -216,16 +249,16 @@
 
   /* close button styling for modal - class name needs to stay as close because it's modifying Bootstrap code*/
 .close {
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: white;
-  text-shadow: none;
-  opacity: 1;
-  position: absolute;
-  right: 10px;
+    font-size: 2em;
+    font-weight: 400;
+    color: white;
+    text-shadow: none;
+    opacity: 1;
+    margin-right: 1em;
+    margin-top: 0em;
 }
 
 .close:hover {
-  color: grey;
+  color: white;
   text-decoration: none;
 }

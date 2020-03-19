@@ -1,5 +1,5 @@
 .CircularProgressbar {
-  width: 300px;
+  width: 275px;
   vertical-align: middle; 
   
 }
@@ -11,13 +11,12 @@
 }
 
 .CircularProgressbar .CircularProgressbar-trail {
-  stroke: transparent;
-  /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
+  stroke: rgb(255, 255, 255, 0.3);
   stroke-linecap: round;
 }
 
 .CircularProgressbar .CircularProgressbar-text {
-  fill: #8ab446;
+  fill: white;
   font-size: 10px;
   text-anchor: middle;
   white-space: pre-wrap;
@@ -25,129 +24,157 @@
 }
 
 body {
-  background-color: #004445;
+  background-color: #8ab446;
   background-size: cover;
   background-attachment: fixed;
   height: auto;
 }
 
 .container-fluid {
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
   background-color: #8ab446;
 }
 
 .counter {
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
-  background-color: #8ab446;
+  font-size: 1.1em;
+  font-weight: 500;
   color: white;
-  padding-top: 1em;
+  line-height: 1.2em;
   padding-left: 2em;
-  padding-bottom: 3em;
-  line-height: 0em;
-  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding-top: 1.7em;
 }
 
 h1 { 
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
+  color: white;
+  line-height: 1em;
   text-align: left;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 
 .title {
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
-  color: white;
-  padding-left: 2em;
-  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding-left: 1em;
+  background-color: rgb(255, 255, 255, 0.3);
 }
 
 .dateTime {
-  background-color: #8ab446;
+  background-color: rgb(255, 255, 255, 0.3);
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.2em;
   color: white;
-  padding-left: 3em;
-  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding-top: 0.8em;
+  white-space: pre-wrap;
 }
 
 .graph {
-  background-color: white;
   font-family: 'Heebo', sans-serif;
   font-weight: 100;
-  color: #8ab446;
-  padding-top: 1em;
+  margin-top: -2.6em;
 }
-.challenge {
-  background-color: white;
+.challenge {  
   font-family: 'Heebo', sans-serif;
-  color: #8ab446;
+  color: white;
+  background-color: transparent;
   text-align: center;
   font-size: 2.5em;
-  font-weight: 100;
+  font-weight: 300;
+  white-space: pre-wrap;
 }
 
 .tipHint {
-  background-color: #8ab446;
+  background-color: rgb(255, 255, 255, 0.3);
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
+  font-size: 1em;
+  font-weight: 400;
   color: white;
-  text-align: left;
+  text-align: center;
   padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .tipHintMobile {
-  background-color: #8ab446;
+  background-color: rgb(255, 255, 255, 0.3);
   font-family: 'Heebo', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
   color: white;
-  text-align: left;
-  padding-left: 2em;
+  text-align: center;
   padding-top: 1em;
   padding-bottom: 1em;
-
 }
 
 .boxForButtons {
   width: fit-content;
-  background-color: white;
+  background-color: transparent;
 }
 
 .leftButtonBox {
   background-color: transparent;
-  font-family: 'Heebo', sans-serif;
-  color: #8ab446;
-  padding: 10px;
   text-align: right; 
+  padding: 10px; 
 }
 
 .rightButtonBox { 
-  background-color: white;
-  font-family: 'Heebo', sans-serif;
-  color: #8ab446;
+  background-color: transparent;
   text-align: left;
   padding: 10px;
 }
 
-.btn {
-  color:white;
-
+.tryAnother {
+  background-color: transparent;
+  border-color: white;
+  border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  margin-top: -1em;
 }
 
-.tryAnother {
+.tryAnother:hover {
   background-color: #8ab446;
+  color: white;
+  text-decoration: none;
+  border-style: none;
 }
 
 .accept {
-  background-color: #8ab446
+  background-color: transparent;
+  border-color: white;
+  border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  margin-top: -1em;
+}
+
+.accept:hover {
+  background-color: #8ab446;
+  color: white;
+  text-decoration: none;
+  border-style: none;
 }
 
 .themesButton {
-  background-color: #8ab446;
+  background-color: transparent;
+  border-color: white;
+  border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  margin-left: -3em;
+  margin-top: -0.5em;
+}
+
+.themesButton:hover {
+  background-color: white;
+  color: #8ab446;
+  text-decoration: none;
+  border-style: none;
 }
 
 .closeModalButton {
@@ -156,25 +183,17 @@ h1 {
   bottom: 10px;
 }
 
-/* border: none;
-  
-  display: inline-block;
-  font-size:;
-  margin:; */
-
 .footer {
   background-color: #8ab446;
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 0.9em;
   color: white;
+  line-height: 1em;
   text-align: left;
-  padding-top: 3em;
-  padding-left: 2em;
-  padding-bottom: 2em;
-  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding-top: 1.7em;
+  padding-left: 1em;
+  padding-bottom: 1.1em;
 }
 
 .background {
@@ -185,7 +204,6 @@ h1 {
   overflow: hidden;
 }
 
-
 .Modal {
   position: absolute;
   top: 40px;
@@ -193,7 +211,7 @@ h1 {
   right: 40px;
   bottom: 40px;
   border-radius: 8px;
-  background-color: rgb(255, 255, 255);
+  background-color: #8ab446;
   max-height: 100vh;
   overflow-y: auto;
   outline:none!important
@@ -201,17 +219,23 @@ h1 {
 
 .ModalTitle {
   font-family: 'Heebo', sans-serif;
-  color: #8ab446;
+  color: white;
+  font-weight: 500;
   text-align: center;
   font-size: 2.5em;
   font-weight: 300;
   white-space: pre-wrap;
+  margin-top: 0.5em;
+  margin-left: 1em;
 }
 
 .ModalText {
-  color: black;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  color: white;
   text-align: center;
   white-space: pre-wrap;
+  padding-bottom: 1em;
 }
 
 .ReactModal__Overlay {
@@ -229,16 +253,17 @@ h1 {
 
 /* close button styling for modal - class name needs to stay as close because it's modifying Bootstrap code*/
 .close {
-  font-size: 2.5rem;
+  font-size: 2em;
   font-weight: 400;
-  color: #8ab446;
+  color: white;
   text-shadow: none;
   opacity: 1;
-  position: absolute;
-  right: 10px;
+  margin-right: 1em;
+  margin-top: 0em;
 }
 
 .close:hover {
-  color: #000;
+  color: white;
   text-decoration: none;
+  opacity: 1;
 }
