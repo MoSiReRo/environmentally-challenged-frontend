@@ -1,5 +1,5 @@
 .CircularProgressbar {
-  width: 400px;
+  width: 300px;
   vertical-align: middle; 
   /* fill:; */
 }
@@ -12,7 +12,6 @@
 
 .CircularProgressbar .CircularProgressbar-trail {
   stroke: transparent;
-  /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
   stroke-linecap: round;
 }
 
@@ -25,7 +24,7 @@
 }
 
 body {
-  background-color: #004445;
+  background-color: grey;
   background-size: cover;
   background-attachment: fixed;
   height: auto;
@@ -33,27 +32,27 @@ body {
 
 .container-fluid {
   background-image: url("images/simon-mumenthaler-Q7oMOmU-SqY-unsplash.jpg");
-  background-color: #004445;
+  background-color: grey;
 }
 
 .counter {
   font-family: 'Heebo', sans-serif;
   font-size: 1em;
   font-weight: 500;
-  /* background-color: #ffd800;
-  /* color: #004445; */
   color: #ffd800;
-  padding-left: 1.1;
-  padding-top: 1em;
+  line-height: 1.3em;
+  padding-left: 1.5em;
+  padding-top: 1.7em;
 }
 
 h1 { 
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
   color: #ffd800;
+  line-height: 1em;
   text-align: left;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 0.5em;
 
 }
 
@@ -69,10 +68,9 @@ h1 {
   font-family: 'Heebo', sans-serif;
   font-size: 1.2em;
   font-weight: 300;
+  line-height: 1.2em;
   color: #ffd800;;
-  padding-top: 2.4em;
-  padding-left: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.8em;
   white-space: pre-wrap;
 }
 
@@ -81,7 +79,7 @@ h1 {
   font-family: 'Heebo', sans-serif;
   font-weight: 100;
   color: #2c7873;
-  padding-top: 0.5em;
+  margin-top: -2.2em;
 }
 
 .challenge {
@@ -98,9 +96,10 @@ h1 {
 .tipHint {
   background-color: rgb(128, 128, 128, 0.6);
   font-family: 'Heebo', sans-serif;
+  font-size: 1em;
   font-weight: 400;
   color: #ffd800;
-  text-align: left;
+  text-align: center;
   padding-left: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -109,7 +108,7 @@ h1 {
 .tipHintMobile {
   background-color: #ffd800;
   font-family: 'Heebo', sans-serif;
-  color: #2c7873;
+  color: grey;
   text-align: left;
   padding-left: 1em;
   padding-top: 1em;
@@ -136,45 +135,52 @@ h1 {
 .tryAnother {
   background-color: #ffd800;
   border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  color: rgb(59, 59, 59);
+  margin-top: -1em;
 }
 
 .accept {
   background-color: #ffd800;
   border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  color: rgb(59, 59, 59);
+  margin-top: -1em;
 }
 
 .themesButton {
-  background-color: white;
+  background-color: #ffd800;
+  border-color: rgb(59, 59, 59);
+  border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  color: rgb(59, 59, 59);
+  margin-left: -3em;
+  margin-top: -0.5em;
 }
 
 .closeModalButton {
   background-color: rgb(194, 194, 194);
   text-align: center;
-  bottom:   10px;
+  bottom: 10px;
+  border-radius: 0;
 }
-
-/* border: none;
-  
-  display: inline-block;
-  font-size:;
-  margin:; */
 
 .footer {
   background-color: #ffd800;
   font-family: 'Heebo', sans-serif;
   font-weight: 300;
   font-size: 0.9em;
-  color: gray;
+  line-height: 1em;
+  color: rgb(59, 59, 59);
   text-align: left;
-  padding-top: 2em;
+  padding-top: 1.7em;
   padding-left: 1em;
-  padding-bottom: 2em;
+  padding-bottom: 1.1em;
 }
 
 .ReactModal__Body--open {
   overflow: hidden;
 }
-
 
 .Modal {
   position: absolute;
@@ -182,27 +188,32 @@ h1 {
   left: 40px;
   right: 40px;
   bottom: 40px;
-  border-radius: 8px;
+  border-radius: 0px;
   background-color: rgb(59, 59, 59);
   max-height: 100vh;
   overflow-y: auto;
   outline:none!important
-
 }
 
 .ModalTitle {
   font-family: 'Heebo', sans-serif;
   color: #ffd800;
+  font-weight: 500;
   text-align: center;
   font-size: 2.5em;
   font-weight: 300;
   white-space: pre-wrap;
+  margin-top: 0.5em;
+  margin-left: 1em;
 }
 
 .ModalText {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
   color: white;
   text-align: center;
   white-space: pre-wrap;
+  margin-bottom: 0.3em;
 }
 
 .ReactModal__Overlay {
@@ -220,13 +231,14 @@ h1 {
 
 /* close button styling for modal - class name needs to stay as close because it's modifying Bootstrap code*/
 .close {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 400;
   color: #ffd800;
   text-shadow: none;
   opacity: 1;
+  margin-right: 1em;
+  margin-top: 0em;
 }
-
 
 .close:hover {
   color: white;

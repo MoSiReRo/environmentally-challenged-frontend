@@ -19,7 +19,7 @@ class Challenge extends React.Component {
 
         return (
             <div>
-                <p>{message}</p>
+                <p style={{fontWeight: '500', lineHeight: '1.1em', paddingTop: '0.3em'}} >{message}</p>
             </div>
         )
         
