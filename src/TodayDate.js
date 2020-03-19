@@ -23,7 +23,7 @@ class TodayDate extends React.Component {
         const date = moment().format("D MMMM YYYY");
         const time = moment().format("h:mm a");
         return (
-            <div className="col-12 col-md-3 dateTime">
+            <div className="col-md-3 dateTime">
             <span style={{fontWeight: '500'}} >{day} {date}</span> <br /> {time}
             {this.callMe()}
          </div>

@@ -201,10 +201,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
+        <Header/>
         <Counter
           treeCounter={this.state.completedChallenges.length} 
           />
-        <Header/>
         <Main
           todaysChallenge={this.state.todaysChallenge}
           newChallengeFunc={this.newChallenge}

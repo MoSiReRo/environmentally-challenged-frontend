@@ -1,7 +1,7 @@
 .CircularProgressbar {
   width: 400px;
   vertical-align: middle; 
-  fill:;
+  /* fill:; */
 }
 
 .CircularProgressbar .CircularProgressbar-path {
@@ -37,16 +37,15 @@ body {
 }
 
 .counter {
-  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
-  /* background-color: #8ab446; */
+  font-size: 1em;
+  font-weight: 500;
+  /* background-color: #ffd800;
   /* color: #004445; */
-  color: yellow;
-  padding-left: 2em;
-  padding-bottom: 3em;
-  line-height: 0em;
-  margin-top: 10px;
+  color: #ffd800;
+  padding-left: 1.1;
+  padding-top: 1em;
+  /* background-color: rgb(128, 128, 128, 0.6); */
 }
 
 h1 { 
@@ -67,7 +66,7 @@ h1 {
 }
 
 .dateTime {
-  background-color: transparent;
+  background-color: rgb(128, 128, 128, 0.6);
   font-family: 'Heebo', sans-serif;
   font-size: 1.2em;
   font-weight: 300;
@@ -98,12 +97,14 @@ h1 {
 }
 
 .tipHint {
-  background-color: #ffd800;
+  background-color: rgb(128, 128, 128, 0.6);
   font-family: 'Heebo', sans-serif;
-  font-weight: 300;
-  color: #2c7873;
+  font-weight: 400;
+  color: #ffd800;
   text-align: left;
   padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .tipHintMobile {
@@ -134,11 +135,13 @@ h1 {
 }
 
 .tryAnother {
-  background-color: white;
+  background-color: #ffd800;
+  border-radius: 0;
 }
 
 .accept {
-  background-color: white
+  background-color: #ffd800;
+  border-radius: 0;
 }
 
 /* border: none;
@@ -148,45 +151,13 @@ h1 {
   margin:; */
 
 .footer {
-  background-color: transparent;
+  background-color: #ffd800;
   font-family: 'Heebo', sans-serif;
   font-weight: 300;
   font-size: 0.9em;
-  color: white;
+  color: gray;
   text-align: left;
   padding-top: 2em;
   padding-left: 1em;
   padding-bottom: 2em;
 }
-
-/* .red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.yellow {
-  background-color: rgb(223, 182, 3);
-}
-
-.pink {
-  background-color: pink;
-}
-
-.grey {
-  background-color: grey;
-}
-
-.orange {
-  background-color: rgb(255, 136, 0);
-}
-
-.purple {
-  background-color: purple;
-} */
