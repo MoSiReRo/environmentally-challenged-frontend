@@ -14,8 +14,7 @@ class Challenge extends React.Component {
         } else if (dayEnd && successfulDay === false) {
             message = "Try again tomorrow - see you then!"
         } else {
-            message = `Today's Challenge:
-            ${this.props.todaysChallenge.challengeDesc}`;
+            message = `Today's Challenge: \n${this.props.todaysChallenge.challengeDesc}`;
         }
 
         return (

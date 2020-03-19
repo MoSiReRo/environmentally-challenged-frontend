@@ -1,11 +1,11 @@
 .CircularProgressbar {
-  width: 400px;
+  width: 300px;
   vertical-align: middle; 
-  /* fill:; */
+  
 }
 
 .CircularProgressbar .CircularProgressbar-path {
-  stroke: #ffd800;
+  stroke: #8ab446;
   stroke-linecap: butt;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -17,7 +17,7 @@
 }
 
 .CircularProgressbar .CircularProgressbar-text {
-  fill: #ffd800;
+  fill: #8ab446;
   font-size: 10px;
   text-anchor: middle;
   white-space: pre-wrap;
@@ -32,125 +32,128 @@ body {
 }
 
 .container-fluid {
-  background-image: url("images/simon-mumenthaler-Q7oMOmU-SqY-unsplash.jpg");
-  background-color: #004445;
+  background-color: #8ab446;
 }
 
 .counter {
   font-family: 'Heebo', sans-serif;
-  font-size: 1em;
-  font-weight: 500;
-  /* background-color: #ffd800;
-  /* color: #004445; */
-  color: #ffd800;
-  padding-left: 1.1;
+  font-weight: 100;
+  background-color: #8ab446;
+  color: white;
   padding-top: 1em;
+  padding-left: 2em;
+  padding-bottom: 3em;
+  line-height: 0em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 { 
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
-  color: #ffd800;
   text-align: left;
-  padding-top: 1em;
-  padding-bottom: 1em;
-
 }
 
 .title {
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
-  padding-left: 1em;
-  background-color: rgb(128, 128, 128, 0.6);
+  color: white;
+  padding-left: 2em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .dateTime {
-  background-color: rgb(128, 128, 128, 0.6);
+  background-color: #8ab446;
   font-family: 'Heebo', sans-serif;
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #ffd800;;
-  padding-top: 2.4em;
-  padding-left: 1em;
-  padding-bottom: 1em;
-  white-space: pre-wrap;
+  font-weight: 100;
+  color: white;
+  padding-left: 3em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .graph {
-  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
+  background-color: white;
   font-family: 'Heebo', sans-serif;
   font-weight: 100;
-  color: #2c7873;
-  padding-top: 0.5em;
+  color: #8ab446;
+  padding-top: 1em;
 }
-
 .challenge {
-  /* background-image: url("https://www.eea.europa.eu/themes/waste/resource-efficiency/the-plastic-waste-trade-in/image_print"); */
+  background-color: white;
   font-family: 'Heebo', sans-serif;
-  color: #ffd800;
-  background-color: transparent;
+  color: #8ab446;
   text-align: center;
   font-size: 2.5em;
-  font-weight: 300;
-  white-space: pre-wrap;
+  font-weight: 100;
 }
 
 .tipHint {
-  background-color: rgb(128, 128, 128, 0.6);
+  background-color: #8ab446;
   font-family: 'Heebo', sans-serif;
-  font-weight: 400;
-  color: #ffd800;
+  font-weight: 100;
+  color: white;
   text-align: left;
   padding-left: 1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
 }
 
 .tipHintMobile {
-  background-color: #ffd800;
+  background-color: #8ab446;
   font-family: 'Heebo', sans-serif;
-  color: #2c7873;
+  color: white;
   text-align: left;
-  padding-left: 1em;
+  padding-left: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
+
 }
 
 .boxForButtons {
   width: fit-content;
-  background-color: transparent;
+  background-color: white;
 }
 
 .leftButtonBox {
   background-color: transparent;
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
+  padding: 10px;
   text-align: right; 
-  padding: 10px; 
 }
 
 .rightButtonBox { 
-  background-color: transparent;
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
+  color: #8ab446;
   text-align: left;
   padding: 10px;
 }
 
+.btn {
+  color:white;
+
+}
+
 .tryAnother {
-  background-color: #ffd800;
-  border-radius: 0;
+  background-color: #8ab446;
 }
 
 .accept {
-  background-color: #ffd800;
-  border-radius: 0;
+  background-color: #8ab446
 }
 
 .themesButton {
-  background-color: white;
+  background-color: #8ab446;
 }
 
 .closeModalButton {
-  background-color: rgb(194, 194, 194);
+  background-color: #8ab446;
   text-align: center;
-  bottom:   10px;
+  bottom: 10px;
 }
 
 /* border: none;
@@ -160,15 +163,22 @@ h1 {
   margin:; */
 
 .footer {
-  background-color: #ffd800;
+  background-color: #8ab446;
   font-family: 'Heebo', sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 0.9em;
-  color: gray;
+  color: white;
   text-align: left;
-  padding-top: 2em;
-  padding-left: 1em;
+  padding-top: 3em;
+  padding-left: 2em;
   padding-bottom: 2em;
+  background-image: url("images/jordan-sanchez-GXV2uVv1DrE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background {
+  background-color: white;
 }
 
 .ReactModal__Body--open {
@@ -183,16 +193,15 @@ h1 {
   right: 40px;
   bottom: 40px;
   border-radius: 8px;
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(255, 255, 255);
   max-height: 100vh;
   overflow-y: auto;
   outline:none!important
-
 }
 
 .ModalTitle {
   font-family: 'Heebo', sans-serif;
-  color: #ffd800;
+  color: #8ab446;
   text-align: center;
   font-size: 2.5em;
   font-weight: 300;
@@ -200,7 +209,7 @@ h1 {
 }
 
 .ModalText {
-  color: white;
+  color: black;
   text-align: center;
   white-space: pre-wrap;
 }
@@ -220,16 +229,16 @@ h1 {
 
 /* close button styling for modal - class name needs to stay as close because it's modifying Bootstrap code*/
 .close {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
-  color: #ffd800;
+  color: #8ab446;
   text-shadow: none;
   opacity: 1;
+  position: absolute;
+  right: 10px;
 }
 
-
 .close:hover {
-  color: white;
+  color: #000;
   text-decoration: none;
-  opacity: 1;
 }
