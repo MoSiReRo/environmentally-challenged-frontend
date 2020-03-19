@@ -231,6 +231,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
+      
+        {/* Stylesheet needs to be here so it can update from state*/}
+        <link rel="stylesheet" type="text/css" href={process.env.PUBLIC_URL + '/' + this.state.stylePath} />  
         <ReactModal
           isOpen={this.state.showModal}
           contentLabel="Your Progress Modal"
@@ -243,12 +246,6 @@ class App extends React.Component {
             stylePath={this.state.stylePath}
           />
         </ReactModal>
-        {/* Stylesheet needs to be here so it can update from state*/}
-        <link rel="stylesheet" type="text/css" href={process.env.PUBLIC_URL + '/' + this.state.stylePath} />
-        <Counter
-          treeCounter={this.state.completedChallenges.length}
-        />
-        <Header />
         <Main
           todaysChallenge={this.state.todaysChallenge}
           newChallengeFunc={this.newChallenge}

@@ -15,7 +15,7 @@ class Counter extends React.Component {
         return (
             <div className="row">
                 <div className="col-12 counter">
-            Trees: {Math.floor(this.props.treeCounter / 21)}
+            Trees Planted {Math.floor(this.props.treeCounter / 21)}
                 </div>
             </div>
         );
