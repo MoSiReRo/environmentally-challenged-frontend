@@ -10,7 +10,7 @@
 }
 
 .CircularProgressbar .CircularProgressbar-trail {
-  stroke: transparent;
+  stroke: rgb(255, 255, 255, 0.3);
   stroke-linecap: round;
 }
 
@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: grey;
+  background-color: #ffd800;
   background-size: cover;
   background-attachment: fixed;
   height: auto;
@@ -31,7 +31,7 @@ body {
 
 .container-fluid {
   background-image: url("images/97-simon-mumenthaler-Q7oMOmU-SqY-unsplash.jpg");
-  background-color: #ffd800;
+  background-color: grey;
 }
 
 .counter {
@@ -74,7 +74,7 @@ h1 {
 
 .graph {
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   margin-top: -2.6em;
 }
 
@@ -92,7 +92,7 @@ h1 {
   background-color: rgb(128, 128, 128, 0.6);
   font-family: 'Heebo', sans-serif;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffd800;
   text-align: center;
   padding-left: 1em;
@@ -104,7 +104,7 @@ h1 {
   background-color: rgb(128, 128, 128, 0.6);
   font-family: 'Heebo', sans-serif;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffd800;
   text-align: center;
   padding-top: 1em;
@@ -178,10 +178,21 @@ h1 {
 }
 
 .closeModalButton {
-  background-color: rgb(194, 194, 194);
-  text-align: center;
-  bottom: 10px;
+  background-color: transparent;
+  border-color: white;
   border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
+.closeModalButton:hover {
+  background-color: white;
+  color: rgb(59, 59, 59);
+  text-decoration: none;
+  border-style: none;
 }
 
 .footer {
