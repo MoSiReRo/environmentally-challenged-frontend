@@ -41,7 +41,7 @@ body {
   font-weight: 500;
   color: white;
   line-height: 1.2em;
-  padding-left: 2em;
+  padding-left: 1.5em;
   padding-top: 1.7em;
 }
 
@@ -75,7 +75,7 @@ h1 {
 
 .graph {
   font-family: 'Heebo', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   margin-top: -2.6em;
 }
 .challenge {  
@@ -92,7 +92,7 @@ h1 {
   background-color: rgb(255, 255, 255, 0.2);
   font-family: 'Heebo', sans-serif;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 500;
   color: white;
   text-align: center;
   padding-left: 1em;
@@ -104,7 +104,7 @@ h1 {
   background-color: rgb(255, 255, 255, 0.2);
   font-family: 'Heebo', sans-serif;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 500;
   color: white;
   text-align: center;
   padding-top: 1em;
@@ -178,9 +178,21 @@ h1 {
 }
 
 .closeModalButton {
-  background-color: #8ab446;
+  background-color: transparent;
+  border-color: white;
+  border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
   text-align: center;
-  bottom: 10px;
+}
+
+.closeModalButton:hover {
+  background-color: white;
+  color: #8ab446;
+  text-decoration: none;
+  border-style: none;
 }
 
 .footer {
