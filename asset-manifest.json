@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/environmentally-challenged-frontend/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/environmentally-challenged-frontend/static/js/main.288cdad4.chunk.js",
+    "main.js.map": "/environmentally-challenged-frontend/static/js/main.288cdad4.chunk.js.map",
+    "runtime-main.js": "/environmentally-challenged-frontend/static/js/runtime-main.0f07b336.js",
+    "runtime-main.js.map": "/environmentally-challenged-frontend/static/js/runtime-main.0f07b336.js.map",
+    "static/js/2.6e672816.chunk.js": "/environmentally-challenged-frontend/static/js/2.6e672816.chunk.js",
+    "static/js/2.6e672816.chunk.js.map": "/environmentally-challenged-frontend/static/js/2.6e672816.chunk.js.map",
+    "index.html": "/environmentally-challenged-frontend/index.html",
+    "precache-manifest.443e78312c687485303bf8353a6ea827.js": "/environmentally-challenged-frontend/precache-manifest.443e78312c687485303bf8353a6ea827.js",
+    "service-worker.js": "/environmentally-challenged-frontend/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/environmentally-challenged-frontend/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.6e672816.chunk.js.LICENSE.txt": "/environmentally-challenged-frontend/static/js/2.6e672816.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0f07b336.js",
+    "static/js/2.6e672816.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.288cdad4.chunk.js"
+  ]
+}

@@ -1,0 +1,293 @@
+.CircularProgressbar {
+  width: 275px;
+  vertical-align: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #ffd800;
+  stroke-linecap: butt;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: rgb(255, 255, 255, 0.3);
+  stroke-linecap: round;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #ffd800;
+  font-size: 10px;
+  text-anchor: middle;
+  white-space: pre-wrap;
+  line-break: break-spaces;
+}
+
+body {
+  background-color: #ffd800;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+}
+
+.container-fluid {
+  background-image: url("images/97-simon-mumenthaler-Q7oMOmU-SqY-unsplash.jpg");
+  background-color: grey;
+}
+
+.counter {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #ffd800;
+  line-height: 1.2em;
+  padding-left: 1.5em;
+  padding-top: 1.7em;
+}
+
+h1 { 
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  color: #ffd800;
+  line-height: 1em;
+  text-align: left;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.title {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  padding-left: 1em;
+  background-color: rgb(128, 128, 128, 0.6);
+}
+
+.dateTime {
+  background-color: rgb(128, 128, 128, 0.6);
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.2em;
+  color: #ffd800;;
+  padding-top: 0.8em;
+  white-space: pre-wrap;
+}
+
+.graph {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  margin-top: -2.6em;
+}
+
+.challenge {
+  font-family: 'Heebo', sans-serif;
+  color: #ffd800;
+  background-color: transparent;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 300;
+  white-space: pre-wrap;
+}
+
+.tipHint {
+  background-color: rgb(128, 128, 128, 0.6);
+  font-family: 'Heebo', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: #ffd800;
+  text-align: center;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.tipHintMobile {
+  background-color: rgb(128, 128, 128, 0.6);
+  font-family: 'Heebo', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: #ffd800;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.boxForButtons {
+  width: fit-content;
+  background-color: transparent;
+}
+
+.leftButtonBox {
+  background-color: transparent;
+  text-align: right; 
+  padding: 10px; 
+}
+
+.rightButtonBox { 
+  background-color: transparent;
+  text-align: left;
+  padding: 10px;
+}
+
+.tryAnother {
+  background-color: #ffd800;
+  border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  color: rgb(59, 59, 59);
+  margin-top: -1em;
+}
+
+.tryAnother:hover {
+  background-color: transparent;
+  color: #ffd800;
+  text-decoration: none;
+  border-style: ridge;
+  border-color: #ffd800;
+}
+
+.accept {
+  background-color: #ffd800;
+  border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  color: rgb(59, 59, 59);
+  margin-top: -1em;
+}
+
+.accept:hover {
+  background-color: transparent;
+  color: #ffd800;
+  text-decoration: none;
+  border-style: ridge;
+  border-color: #ffd800;
+}
+
+.themesButton {
+  background-color: #ffd800;
+  border-color: rgb(59, 59, 59);
+  border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  color: rgb(59, 59, 59);
+  margin: 0.1em;
+}
+
+.themesButton:hover {
+  background-color: rgb(59, 59, 59);
+  color: #ffd800;
+  text-decoration: none;
+  border-style: none;
+}
+
+.closeModalButton {
+  background-color: transparent;
+  border-color: white;
+  border-radius: 0;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
+.closeModalButton:hover {
+  background-color: white;
+  color: rgb(59, 59, 59);
+  text-decoration: none;
+  border-style: none;
+}
+
+.footer {
+  background-color: #ffd800;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  line-height: 1em;
+  color: rgb(59, 59, 59);
+  padding-top: 0.5em;
+}
+
+.footerText {
+  text-align: left;
+  padding-top: 1.1em;
+  padding-left: 1em;
+  padding-bottom: 1.1em
+}
+
+.debugPink {
+  background-color: hotpink;
+}
+
+.debugGreen {
+  background-color: lawngreen;
+}
+
+.debugBlue {
+  background-color: blue;
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border-radius: 0px;
+  background-color: rgb(59, 59, 59);
+  max-height: 100vh;
+  overflow-y: auto;
+  outline:none!important
+}
+
+.ModalTitle {
+  font-family: 'Heebo', sans-serif;
+  color: #ffd800;
+  font-weight: 500;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 300;
+  white-space: pre-wrap;
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+.ModalText {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  white-space: pre-wrap;
+  margin-bottom: 0.3em;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+/* close button styling for modal - class name needs to stay as close because it's modifying Bootstrap code*/
+.close {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  color: #ffd800;
+  text-shadow: none;
+  opacity: 1;
+  margin-right: 1em;
+  margin-top: 0em;
+}
+
+.close:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+}
